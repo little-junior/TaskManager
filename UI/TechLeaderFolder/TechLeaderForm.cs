@@ -23,7 +23,7 @@ namespace UI
             InitializeComponent();
             lblData.Text = DateTime.Now.ToString("D", CultureInfo.GetCultureInfo("pt-br"));
             TechLeader = techLeader;
-            lblInfos.Text = $"{TechLeader.Position} {TechLeader.Name} | {TechLeader.Specialization}";
+            lblInfos.Text = techLeader.NameSpecializationPosition;
         }
 
 
