@@ -44,6 +44,7 @@ namespace ModelLayer.Users
         public Positions Position { get; private set; }
         public Specializations Specialization { get; private set; }
 
+        [JsonIgnore]
         public string? NameSpecializationPosition { get; } = null;
         public string KeyAccess { get; protected set; }
         
