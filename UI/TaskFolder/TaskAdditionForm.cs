@@ -13,6 +13,7 @@ using DataLayer.Services;
 using DataLayer.DataAccess;
 using DataLayer.Services.Interfaces;
 using System.Collections;
+using ModelLayer.Enums;
 
 namespace UI.Task
 {
@@ -57,14 +58,23 @@ namespace UI.Task
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             RealTask.Task task;
+            var nomeTarefa = txtboxNome.Text;
+            var descricaoTarefa = txtboxDescricao.Text;
+            var responsavelTarefa = user;
+
             if (user is RealUsers.Developer)
             {
-                task = new RealTask.Task(txtboxNome.Text, txtboxDescricao.Text, responsible: user);
+                
+                task = new RealTask.Task(name: nomeTarefa, description: descricaoTarefa, responsible: responsavelTarefa);
             }
             else
             {
-                
-                task = new RealTask.Task(txtboxNome.Text, txtboxDescricao.Text);
+                responsavelTarefa = (RealUsers.User)cbboxResponsavel.SelectedItem;
+                var aprovada = radiobtnSim.Checked;
+                var duracaoTarefa = (int)numericTempo.Value;
+                var statusAtual = aprovada ? Status.EmAndamento : Status.ASerAprovada;
+
+                task = new RealTask.Task(name: nomeTarefa, description: descricaoTarefa, responsible: responsavelTarefa, approved: aprovada, taskDaySpan: duracaoTarefa, status: statusAtual);
             }
             try
             {
@@ -82,12 +92,14 @@ namespace UI.Task
         {
             txtboxNome.Text = string.Empty;
             txtboxDescricao.Text = string.Empty;
+            cbboxResponsavel.TabIndex = 0;
+            numericTempo.Value = 0;
         }
 
         private void PreencherComboBoxResponsaveis(ArrayList users)
         {
-            cbboxResponsavel.DisplayMember = "Name";
-            cbboxResponsavel.ValueMember = "Id"; // Ajuste conforme a propriedade que deseja usar como valor
+            cbboxResponsavel.DisplayMember = "NameSpecializationPosition";
+            cbboxResponsavel.ValueMember = "Id";
 
             cbboxResponsavel.DataSource = users;
             
