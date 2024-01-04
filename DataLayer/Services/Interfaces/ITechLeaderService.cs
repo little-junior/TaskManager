@@ -9,7 +9,6 @@ namespace DataLayer.Services.Interfaces
 {
     internal interface ITechLeaderService
     {
-        void CreateTechLeader(TechLeader techLeader);
         List<TechLeader> GetTechLeaders();
     }
 }

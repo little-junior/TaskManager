@@ -11,5 +11,7 @@ namespace DataLayer.Services.Interfaces
     {
         Developer? DeveloperAuthenticate(string keyAccess);
         TechLeader? TechLeaderAuthenticate(string keyAccess);
+
+        bool AdminAuthenticate(string keyAccess);
     }
 }
