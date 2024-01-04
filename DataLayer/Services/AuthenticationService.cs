@@ -18,6 +18,12 @@ namespace DataLayer.Services
             _developerDataManagement = developerDataManagement;
             _techLeaderDataManagement = techLeaderDataManagement;
         }
+
+        public bool AdminAuthenticate(string keyAccess)
+        {
+            return keyAccess == "admin";
+        }
+
         public Developer? DeveloperAuthenticate(string keyAccess)
         {
             var developers = _developerDataManagement.ReadJSON();
