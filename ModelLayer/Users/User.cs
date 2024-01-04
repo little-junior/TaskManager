@@ -29,6 +29,7 @@ namespace ModelLayer.Users
             Position = position;
             Specialization = specialization;
             KeyAccess = keyAccess;
+            NameSpecializationPosition = $"{Name} - {Specialization} {Position}";
         }
 
         //public User(string name, string email, Positions position, Specializations specialization)
@@ -42,7 +43,8 @@ namespace ModelLayer.Users
         public string Email { get; private set; }
         public Positions Position { get; private set; }
         public Specializations Specialization { get; private set; }
-        
+
+        public string? NameSpecializationPosition { get; } = null;
         public string KeyAccess { get; protected set; }
         
 
