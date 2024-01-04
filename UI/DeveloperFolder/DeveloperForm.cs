@@ -22,7 +22,7 @@ using UI.Task;
             InitializeComponent();
             lblData.Text = DateTime.Now.ToString("D", CultureInfo.GetCultureInfo("pt-br"));
             Developer = developer;
-            lblInfos.Text = $"{Developer.Position} {Developer.Name} | {Developer.Specialization}";
+            lblInfos.Text = developer.NameSpecializationPosition;
         }
 
         public RealUsers.Developer Developer { get; }
