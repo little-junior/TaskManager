@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models.Enums
+namespace ModelLayer.Enums
 {
-    internal enum Positions
+    public enum Positions
     {
         TechLeader = 1,
         Developer = 2

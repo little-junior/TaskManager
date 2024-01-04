@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models.Enums
+namespace ModelLayer.Enums
 {
-    internal enum Specializations
+    public enum Specializations
     {
         Backend = 1,
         Frontend = 2,
