@@ -13,19 +13,25 @@ namespace DataLayer.Services
 {
     public class TechLeaderService : ITechLeaderService
     {
-        private readonly IDataManagement<TechLeader> _techLeaderDataManagement;
-        private readonly IDataManagement<RealTask.Task> _taskDataManagement;
-        private readonly IDataManagement<Developer> _developerDataManagement;
+        private readonly IDataManagement<TechLeader>? _techLeaderDataManagement;
+        private readonly IDataManagement<RealTask.Task>? _taskDataManagement;
+        private readonly IDataManagement<Developer>? _developerDataManagement;
 
-        public TechLeaderService(IDataManagement<TechLeader> teachLeaderManagement)
+        public TechLeaderService(IDataManagement<TechLeader> teachLeaderDataManagement)
         {
-            _techLeaderDataManagement = teachLeaderManagement;
+            _techLeaderDataManagement = teachLeaderDataManagement;
         }
 
-        public void CreateTechLeader(TechLeader techLeader)
+        public TechLeaderService(IDataManagement<Developer> developerDataManagement)
         {
-            _techLeaderDataManagement.WriteJSON(techLeader);
+            _developerDataManagement = developerDataManagement;
         }
+
+        public TechLeaderService(IDataManagement<RealTask.Task> taskDataManagement)
+        {
+            _taskDataManagement = taskDataManagement;
+        }
+
 
         public List<TechLeader> GetTechLeaders()
         {
