@@ -47,21 +47,20 @@
             lblTitle.Size = new Size(139, 15);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Adicionar Desenvolvedor";
-            
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(177, 151);
+            lblNome.Location = new Point(138, 151);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(46, 15);
+            lblNome.Size = new Size(119, 15);
             lblNome.TabIndex = 1;
-            lblNome.Text = "Nome: ";
+            lblNome.Text = "Nome e Sobrenome: ";
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(177, 187);
+            lblEmail.Location = new Point(138, 187);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(42, 15);
             lblEmail.TabIndex = 2;
@@ -70,25 +69,24 @@
             // lblArea
             // 
             lblArea.AutoSize = true;
-            lblArea.Location = new Point(177, 234);
+            lblArea.Location = new Point(138, 234);
             lblArea.Name = "lblArea";
             lblArea.Size = new Size(37, 15);
             lblArea.TabIndex = 3;
             lblArea.Text = "Área: ";
-            
             // 
             // txtboxNome
             // 
-            txtboxNome.Location = new Point(263, 148);
+            txtboxNome.Location = new Point(274, 148);
             txtboxNome.Name = "txtboxNome";
-            txtboxNome.Size = new Size(199, 23);
+            txtboxNome.Size = new Size(239, 23);
             txtboxNome.TabIndex = 4;
             // 
             // txtboxEmail
             // 
-            txtboxEmail.Location = new Point(263, 187);
+            txtboxEmail.Location = new Point(274, 187);
             txtboxEmail.Name = "txtboxEmail";
-            txtboxEmail.Size = new Size(199, 23);
+            txtboxEmail.Size = new Size(239, 23);
             txtboxEmail.TabIndex = 5;
             // 
             // btnAdicionar
@@ -99,6 +97,7 @@
             btnAdicionar.TabIndex = 6;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // btnCancelar
             // 
@@ -113,9 +112,9 @@
             // cbboxArea
             // 
             cbboxArea.FormattingEnabled = true;
-            cbboxArea.Location = new Point(263, 231);
+            cbboxArea.Location = new Point(274, 231);
             cbboxArea.Name = "cbboxArea";
-            cbboxArea.Size = new Size(199, 23);
+            cbboxArea.Size = new Size(178, 23);
             cbboxArea.TabIndex = 8;
             // 
             // DeveloperAdditionForm
