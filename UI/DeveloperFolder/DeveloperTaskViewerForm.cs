@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DataLayer.DataAccess;
 using DataLayer.Services;
 using RealTask = ModelLayer.Task;
+using ModelLayer.Enums;
 
 namespace UI.DeveloperFolder
 {
@@ -20,14 +21,25 @@ namespace UI.DeveloperFolder
             InitializeComponent();
 
             _developerService = new DeveloperService(new TaskDataManagement());
+            _devId = devId;
 
+            PopulateComboBox();
+            PopulateListBox(_devId);
 
-            PopulateListBox(devId);
-
+            cbboxStatus.SelectedItem = "Todas";
         }
 
         private readonly DeveloperService _developerService;
+        private readonly string _devId;
 
+        private void PopulateComboBox()
+        {
+            cbboxStatus.Items.Add("Todas");
+            foreach (Status status in Enum.GetValues(typeof(Status)))
+            {
+                cbboxStatus.Items.Add(status.ToString());
+            }
+        }
         private void PopulateListBox(string id)
         {
             var tasksList = _developerService.GetTasksByDeveloper(id);
@@ -35,6 +47,15 @@ namespace UI.DeveloperFolder
             lboxTasks.DataSource = tasksList;
             lboxTasks.DisplayMember = "Name";
         }
+
+        private void PopulateListBox(string id, string option)
+        {
+            var tasksList = _developerService.GetTasksByDeveloper(id).FindAll(t => t.Status.ToString() == option);
+
+            lboxTasks.DataSource = tasksList;
+            lboxTasks.DisplayMember = "Name";
+        }
+
 
         private void lboxTasks_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -65,6 +86,17 @@ namespace UI.DeveloperFolder
             lblDuracao.Visible = true;
             lblAprovada.Visible = true;
             lblStatus.Visible = true;
+        }
+
+        private void cbboxStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            string statusSelecionado = cbboxStatus.SelectedItem.ToString();
+
+            if (statusSelecionado == "Todas")
+                PopulateListBox(_devId);
+            else
+                PopulateListBox(_devId, statusSelecionado);
         }
     }
 }
