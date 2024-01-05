@@ -44,7 +44,7 @@ namespace UI.TechLeader
             try
             {
                 _techLeaderService.AddDeveloper(dev);
-                MessageBox.Show("Desenvolvedor adicionado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Desenvolvedor adicionado com sucesso!\nChave de acesso: {dev.KeyAccess}", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimparDados();
             }
             catch (Exception ex)

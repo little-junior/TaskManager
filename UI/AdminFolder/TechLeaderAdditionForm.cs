@@ -37,7 +37,7 @@ namespace UI.AdminFolder
             try
             {
                 _adminService.AddTechLeader(techLeader);
-                MessageBox.Show("Tech Leader adicionado com sucesso!", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Tech Leader adicionado com sucesso!\nChave de acesso: {techLeader.KeyAccess}", "Confirmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimparDados();
             }
             catch (Exception ex)
