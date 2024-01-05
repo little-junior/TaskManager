@@ -12,8 +12,9 @@ using System.Windows.Forms;
 using UI.Developer;
 using RealUsers = ModelLayer.Users;
 using UI.Task;
+using UI.DeveloperFolder;
 
- namespace UI.Developer
+namespace UI.Developer
 {
     public partial class DeveloperForm : Form
     {
@@ -28,7 +29,8 @@ using UI.Task;
         public RealUsers.Developer Developer { get; }
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var developerTaskViewerForm = new DeveloperTaskViewerForm(Developer.Id);
+            developerTaskViewerForm.ShowDialog();
         }
 
         private void btnAddTask_Click(object sender, EventArgs e)
