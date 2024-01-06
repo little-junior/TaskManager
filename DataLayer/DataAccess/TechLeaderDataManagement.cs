@@ -4,6 +4,7 @@ using ModelLayer.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace DataLayer.DataAccess
 {
     public class TechLeaderDataManagement: IDataManagement<TechLeader>
     {
-        private readonly string _path = @"../../../../DataRepository/techleaders.json";
+        private readonly string _path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "DataRepository/techleaders.json");
 
         public List<TechLeader> ReadJSON()
         {

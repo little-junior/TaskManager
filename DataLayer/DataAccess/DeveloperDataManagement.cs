@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace DataLayer.DataAccess
 {
     public class DeveloperDataManagement : IDataManagement<Developer>
     {
-        private readonly string _path = @"../../../../DataRepository/developers.json";
+        private readonly string _path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "DataRepository/developers.json");
 
         public List<Developer> ReadJSON()
         {

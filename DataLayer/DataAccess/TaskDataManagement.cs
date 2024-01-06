@@ -7,12 +7,13 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using DataLayer.DataAccess.Interfaces;
+using System.Reflection;
 
 namespace DataLayer.DataAccess
 {
     public class TaskDataManagement : IDataManagement<RealTask.Task>
     {
-        private readonly string _path = @"../../../../DataRepository/tasks.json";
+        private readonly string _path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "DataRepository/tasks.json");
 
         public List<RealTask.Task> ReadJSON()
         {
