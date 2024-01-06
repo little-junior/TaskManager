@@ -1,5 +1,6 @@
 using DataLayer.DataAccess;
 using DataLayer.Services;
+using System.Reflection;
 
 namespace UI
 {
@@ -15,12 +16,15 @@ namespace UI
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            var developerDataManagement = new DeveloperDataManagement(); // Substitua pelo seu gerenciamento de dados real
-            var techLeaderDataManagement = new TechLeaderDataManagement(); // Substitua pelo seu gerenciamento de dados real
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "DataRepository");
+            Directory.CreateDirectory(path);
+
+            var developerDataManagement = new DeveloperDataManagement();
+            var techLeaderDataManagement = new TechLeaderDataManagement(); 
             var authenticationService = new AuthenticationService(developerDataManagement, techLeaderDataManagement);
+
             var loginForm = new LoginForm(authenticationService);
-
-
+            
             Application.Run(loginForm);
         }
     }
