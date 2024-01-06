@@ -21,6 +21,11 @@ namespace DataLayer.Services
             _taskDataManagement.WriteJSON(task);
         }
 
+        public void UpdateTask(List<RealTask.Task> tasks)
+        {
+            _taskDataManagement.WriteJSON(tasks);
+        }
+
         public List<RealTask.Task> GetTasks()
         {
             return _taskDataManagement.ReadJSON();
