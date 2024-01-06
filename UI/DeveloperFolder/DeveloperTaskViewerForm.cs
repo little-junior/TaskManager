@@ -11,6 +11,7 @@ using DataLayer.DataAccess;
 using DataLayer.Services;
 using RealTask = ModelLayer.Task;
 using ModelLayer.Enums;
+using UI.TaskFolder;
 
 namespace UI.DeveloperFolder
 {
@@ -31,6 +32,7 @@ namespace UI.DeveloperFolder
 
         private readonly DeveloperService _developerService;
         private readonly string _devId;
+        private RealTask.Task taskAtual;
 
         private void PopulateComboBox()
         {
@@ -63,6 +65,8 @@ namespace UI.DeveloperFolder
             {
                 RealTask.Task tarefaSelecionada = (RealTask.Task)lboxTasks.SelectedItem;
                 ExibirDetalhesTarefa(tarefaSelecionada);
+                taskAtual = tarefaSelecionada;
+                btnEditar.Visible = true;
             }
         }
 
@@ -97,6 +101,31 @@ namespace UI.DeveloperFolder
                 PopulateListBox(_devId);
             else
                 PopulateListBox(_devId, statusSelecionado);
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            var taskEditForm = new TaskEditForm(taskAtual);
+            taskEditForm.DesativarControles();
+            taskEditForm.ShowDialog();
+            if (lboxTasks != null)
+            {
+                RealTask.Task tarefaSelecionada = (RealTask.Task)lboxTasks.SelectedItem;
+                ExibirDetalhesTarefa(tarefaSelecionada);
+                taskAtual = tarefaSelecionada;
+                btnEditar.Visible = true;
+            }
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

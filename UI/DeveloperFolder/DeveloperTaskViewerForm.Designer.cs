@@ -38,6 +38,11 @@
             cbboxStatus = new ComboBox();
             lblStatusBox = new Label();
             btnEditar = new Button();
+            button1 = new Button();
+            label1 = new Label();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
             SuspendLayout();
             // 
             // lboxTasks
@@ -47,7 +52,7 @@
             lboxTasks.Location = new Point(13, 96);
             lboxTasks.Margin = new Padding(4, 5, 4, 5);
             lboxTasks.Name = "lboxTasks";
-            lboxTasks.Size = new Size(458, 529);
+            lboxTasks.Size = new Size(458, 629);
             lboxTasks.TabIndex = 0;
             lboxTasks.SelectedIndexChanged += lboxTasks_SelectedIndexChanged;
             // 
@@ -136,19 +141,73 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(977, 591);
+            btnEditar.Location = new Point(1019, 533);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(112, 34);
             btnEditar.TabIndex = 9;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Visible = false;
+            btnEditar.Click += btnEditar_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(647, 630);
+            button1.Name = "button1";
+            button1.Size = new Size(172, 35);
+            button1.TabIndex = 10;
+            button1.Text = "Com impedimento";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(506, 630);
+            label1.Name = "label1";
+            label1.Size = new Size(126, 25);
+            label1.TabIndex = 11;
+            label1.Text = "Marcar como: ";
+            label1.Click += label1_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(843, 630);
+            button2.Name = "button2";
+            button2.Size = new Size(172, 35);
+            button2.TabIndex = 12;
+            button2.Text = "Abandonada";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.AutoSize = true;
+            button3.Location = new Point(647, 684);
+            button3.Name = "button3";
+            button3.Size = new Size(172, 35);
+            button3.TabIndex = 13;
+            button3.Text = "Concluída (análise)";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(843, 684);
+            button4.Name = "button4";
+            button4.Size = new Size(172, 35);
+            button4.TabIndex = 14;
+            button4.Text = "Atrasada";
+            button4.UseVisualStyleBackColor = true;
             // 
             // DeveloperTaskViewerForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1143, 750);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(label1);
+            Controls.Add(button1);
             Controls.Add(btnEditar);
             Controls.Add(lblStatusBox);
             Controls.Add(cbboxStatus);
@@ -178,5 +237,10 @@
         private ComboBox cbboxStatus;
         private Label lblStatusBox;
         private Button btnEditar;
+        private Button button1;
+        private Label label1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
     }
 }
