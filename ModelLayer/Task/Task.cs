@@ -56,5 +56,15 @@ namespace ModelLayer.Task
         {
             Responsible = responsible;
         }
+
+        public void UpdateName(string name)
+        {
+            Name = name;
+        }
+
+        public void UpdateDescription(string description)
+        {
+            Description = description;
+        }
     }
 }
