@@ -24,7 +24,7 @@ namespace UI
         {
             InitializeComponent();
             _authenticationService = authenticationService;
-            Directory.CreateDirectory(@"../../../../DataRepository");
+            
         }
 
         
