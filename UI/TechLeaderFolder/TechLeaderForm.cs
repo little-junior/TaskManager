@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UI.Task;
 using UI.TechLeader;
+using UI.TechLeaderFolder;
 using RealUsers = ModelLayer.Users;
 
 namespace UI
@@ -27,10 +28,7 @@ namespace UI
         }
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnAddDev_Click(object sender, EventArgs e)
         {
@@ -43,12 +41,18 @@ namespace UI
             Application.Exit();
         }
 
-        
+
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
             var taskAdditionForm = new TaskAdditionForm(TechLeader);
             taskAdditionForm.ShowDialog();
+        }
+
+        private void btnGerTasks_Click(object sender, EventArgs e)
+        {
+            var techLeaderTaskViewerForm = new TechLeaderTaskViewerForm();
+            techLeaderTaskViewerForm.ShowDialog();
         }
     }
 }

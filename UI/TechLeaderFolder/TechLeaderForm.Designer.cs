@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnAddDev = new Button();
-            button2 = new Button();
+            btnGerTasks = new Button();
             lblData = new Label();
             lblInfos = new Label();
             btnAddTask = new Button();
@@ -39,39 +39,43 @@
             // 
             btnAddDev.Cursor = Cursors.Hand;
             btnAddDev.Font = new Font("Segoe UI", 11F);
-            btnAddDev.Location = new Point(282, 351);
+            btnAddDev.Location = new Point(403, 585);
+            btnAddDev.Margin = new Padding(4, 5, 4, 5);
             btnAddDev.Name = "btnAddDev";
-            btnAddDev.Size = new Size(211, 65);
+            btnAddDev.Size = new Size(301, 108);
             btnAddDev.TabIndex = 0;
             btnAddDev.Text = "Adicionar Desenvolvedor";
             btnAddDev.UseVisualStyleBackColor = true;
             btnAddDev.Click += btnAddDev_Click;
             // 
-            // button2
+            // btnGerTasks
             // 
-            button2.Location = new Point(282, 239);
-            button2.Name = "button2";
-            button2.Size = new Size(211, 65);
-            button2.TabIndex = 1;
-            button2.Text = "Gerenciar Tarefas";
-            button2.UseVisualStyleBackColor = true;
+            btnGerTasks.Location = new Point(403, 398);
+            btnGerTasks.Margin = new Padding(4, 5, 4, 5);
+            btnGerTasks.Name = "btnGerTasks";
+            btnGerTasks.Size = new Size(301, 108);
+            btnGerTasks.TabIndex = 1;
+            btnGerTasks.Text = "Gerenciar Tarefas";
+            btnGerTasks.UseVisualStyleBackColor = true;
+            btnGerTasks.Click += btnGerTasks_Click;
             // 
             // lblData
             // 
             lblData.AutoSize = true;
-            lblData.Location = new Point(362, 9);
+            lblData.Location = new Point(517, 15);
+            lblData.Margin = new Padding(4, 0, 4, 0);
             lblData.Name = "lblData";
-            lblData.Size = new Size(31, 15);
+            lblData.Size = new Size(49, 25);
             lblData.TabIndex = 2;
             lblData.Text = "Data";
-            lblData.Click += label1_Click;
             // 
             // lblInfos
             // 
             lblInfos.AutoSize = true;
-            lblInfos.Location = new Point(12, 45);
+            lblInfos.Location = new Point(17, 75);
+            lblInfos.Margin = new Padding(4, 0, 4, 0);
             lblInfos.Name = "lblInfos";
-            lblInfos.Size = new Size(33, 15);
+            lblInfos.Size = new Size(52, 25);
             lblInfos.TabIndex = 3;
             lblInfos.Text = "Infos";
             // 
@@ -79,9 +83,10 @@
             // 
             btnAddTask.Cursor = Cursors.Hand;
             btnAddTask.Font = new Font("Segoe UI", 11F);
-            btnAddTask.Location = new Point(282, 127);
+            btnAddTask.Location = new Point(403, 212);
+            btnAddTask.Margin = new Padding(4, 5, 4, 5);
             btnAddTask.Name = "btnAddTask";
-            btnAddTask.Size = new Size(211, 65);
+            btnAddTask.Size = new Size(301, 108);
             btnAddTask.TabIndex = 4;
             btnAddTask.Text = "Adicionar Tarefa";
             btnAddTask.UseVisualStyleBackColor = true;
@@ -89,16 +94,18 @@
             // 
             // TechLeaderForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(btnAddTask);
             Controls.Add(lblInfos);
             Controls.Add(lblData);
-            Controls.Add(button2);
+            Controls.Add(btnGerTasks);
             Controls.Add(btnAddDev);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "TechLeaderForm";
-            Text = "TaskManager";
+            Text = "Início";
             FormClosed += TechLeaderForm_FormClosed;
             ResumeLayout(false);
             PerformLayout();
@@ -107,7 +114,7 @@
         #endregion
 
         private Button btnAddDev;
-        private Button button2;
+        private Button btnGerTasks;
         private Label lblData;
         private Label lblInfos;
         private Button btnAddTask;
