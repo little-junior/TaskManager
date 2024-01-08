@@ -22,17 +22,19 @@ namespace UI.DeveloperFolder
             InitializeComponent();
 
             _developerService = new DeveloperService(new TaskDataManagement());
+            _taskService = new TaskService(new TaskDataManagement());
             _devId = devId;
 
             PopulateComboBox();
             PopulateListBox(_devId);
 
-            cbboxStatus.SelectedItem = "Todas";
         }
 
         private readonly DeveloperService _developerService;
+        private readonly TaskService _taskService;
         private readonly string _devId;
-        private RealTask.Task taskAtual;
+        private RealTask.Task _taskAtual;
+        private string _statusSelecionado;
 
         private void PopulateComboBox()
         {
@@ -41,6 +43,7 @@ namespace UI.DeveloperFolder
             {
                 cbboxStatus.Items.Add(status.ToString());
             }
+            cbboxStatus.SelectedItem = "Todas";
         }
         private void PopulateListBox(string id)
         {
@@ -65,21 +68,38 @@ namespace UI.DeveloperFolder
             {
                 RealTask.Task tarefaSelecionada = (RealTask.Task)lboxTasks.SelectedItem;
                 ExibirDetalhesTarefa(tarefaSelecionada);
-                taskAtual = tarefaSelecionada;
-                btnEditar.Visible = true;
+                _taskAtual = tarefaSelecionada;
+
+                if (VerificarStatus())
+                {
+                    MostrarOpcoes();
+                }
+                else
+                {
+                    EsconderOpcoes();
+                }
             }
+            
         }
 
         private void ExibirDetalhesTarefa(RealTask.Task tarefa)
         {
-            lblNome.Text = $"Nome: {tarefa.Name}";
-            lblDescricao.Text = $"Descrição: {tarefa.Description}";
-            lblResponsavel.Text = $"Responsável: {tarefa.Responsible.NameSpecializationPosition}";
-            lblDuracao.Text = $"Duração (dias): {tarefa.TaskDaySpan}";
-            lblAprovada.Text = $"Aprovada? -> {tarefa.Approved}";
-            lblStatus.Text = $"Status: {tarefa.Status}";
+            if (tarefa != null)
+            {
+                lblNome.Text = $"Nome: {tarefa.Name}";
+                lblDescricao.Text = $"Descrição: {tarefa.Description}";
+                lblResponsavel.Text = $"Responsável: {tarefa.Responsible.NameSpecializationPosition}";
+                lblDuracao.Text = $"Duração (dias): {tarefa.TaskDaySpan}";
+                lblAprovada.Text = $"Aprovada? -> {tarefa.Approved}";
+                lblStatus.Text = $"Status: {tarefa.Status}";
 
-            ExibirControles();
+                ExibirControles();
+            }
+            else
+            {
+                EsconderControles();
+                EsconderOpcoes();
+            }
         }
 
         private void ExibirControles()
@@ -92,40 +112,158 @@ namespace UI.DeveloperFolder
             lblStatus.Visible = true;
         }
 
+        private void EsconderControles()
+        {
+            lblNome.Visible = false;
+            lblDescricao.Visible = false;
+            lblResponsavel.Visible = false;
+            lblDuracao.Visible = false;
+            lblAprovada.Visible = false;
+            lblStatus.Visible = false;
+        }
         private void cbboxStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            string statusSelecionado = cbboxStatus.SelectedItem.ToString();
+            _statusSelecionado = cbboxStatus.SelectedItem.ToString();
 
-            if (statusSelecionado == "Todas")
-                PopulateListBox(_devId);
-            else
-                PopulateListBox(_devId, statusSelecionado);
+            AtualizarListBox();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            var taskEditForm = new TaskEditForm(taskAtual);
+            var taskEditForm = new TaskEditForm(_taskAtual);
             taskEditForm.DesativarControles();
             taskEditForm.ShowDialog();
-            if (lboxTasks != null)
+            AtualizarListBox();
+            AtualizarExibicao();
+        }
+
+
+
+        private void MostrarOpcoes()
+        {
+            btnEditar.Visible = true;
+            lblMarcarComo.Visible = true;
+            btnMarcarAbandonada.Visible = true;
+            btnMarcarAtrasada.Visible = true;
+            btnMarcarConcluida.Visible = true;
+            btnMarcarImpedimento.Visible = true;
+        }
+
+        private void EsconderOpcoes()
+        {
+            btnEditar.Visible = false;
+            lblMarcarComo.Visible = false;
+            btnMarcarAbandonada.Visible = false;
+            btnMarcarAtrasada.Visible = false;
+            btnMarcarConcluida.Visible = false;
+            btnMarcarImpedimento.Visible = false;
+        }
+
+        private bool VerificarStatus()
+        {
+            if (_taskAtual.Status == Status.EmAnalise)
+                return false;
+            if (_taskAtual.Status == Status.ASerAprovada)
+                return false;
+            if (_taskAtual.Status == Status.Concluida)
+                return false;
+            if(_taskAtual.Status == Status.Abandonada)
+                return false;
+            return true;
+
+
+
+        }
+        private void btnMarcarImpedimento_Click(object sender, EventArgs e)
+        {
+            var tarefasLista = _taskService.GetTasks();
+            tarefasLista.First(t => t.Id ==  _taskAtual.Id).UpdateStatus(Status.ComImpedimento);
+
+            try
             {
-                RealTask.Task tarefaSelecionada = (RealTask.Task)lboxTasks.SelectedItem;
-                ExibirDetalhesTarefa(tarefaSelecionada);
-                taskAtual = tarefaSelecionada;
-                btnEditar.Visible = true;
+                _taskService.UpdateTask(tarefasLista);
+                MessageBox.Show("Tarefa marcada como Com Impedimento", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AtualizarListBox();
+                AtualizarExibicao();
+
             }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnMarcarAbandonada_Click(object sender, EventArgs e)
         {
+            var tarefasLista = _taskService.GetTasks();
+            tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateStatus(Status.Abandonada);
 
+            try
+            {
+                _taskService.UpdateTask(tarefasLista);
+                MessageBox.Show("Tarefa marcada como Abandonada", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AtualizarListBox();
+                AtualizarExibicao();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnMarcarConcluida_Click(object sender, EventArgs e)
+        {
+            var tarefasLista = _taskService.GetTasks();
+            tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateStatus(Status.EmAnalise);
+
+            try
+            {
+                _taskService.UpdateTask(tarefasLista);
+                MessageBox.Show("Tarefa mandada para análise", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AtualizarListBox();
+                AtualizarExibicao();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnMarcarAtrasada_Click(object sender, EventArgs e)
+        {
+            var tarefasLista = _taskService.GetTasks();
+            tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateStatus(Status.EmAtraso);
+
+            try
+            {
+                _taskService.UpdateTask(tarefasLista);
+                MessageBox.Show("Tarefa marcada como Atrasada", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AtualizarListBox();
+                AtualizarExibicao();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AtualizarExibicao()
         {
 
+            RealTask.Task tarefaSelecionada = (RealTask.Task)lboxTasks.SelectedItem;
+            ExibirDetalhesTarefa(tarefaSelecionada);
+            _taskAtual = tarefaSelecionada;
+        }
+
+        private void AtualizarListBox()
+        {
+            if (_statusSelecionado == "Todas")
+                PopulateListBox(_devId);
+            else
+                PopulateListBox(_devId, _statusSelecionado);
         }
     }
 }

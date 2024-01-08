@@ -38,11 +38,11 @@
             cbboxStatus = new ComboBox();
             lblStatusBox = new Label();
             btnEditar = new Button();
-            button1 = new Button();
-            label1 = new Label();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btnMarcarImpedimento = new Button();
+            lblMarcarComo = new Label();
+            btnMarcarAbandonada = new Button();
+            btnMarcarConcluida = new Button();
+            btnMarcarAtrasada = new Button();
             SuspendLayout();
             // 
             // lboxTasks
@@ -150,64 +150,66 @@
             btnEditar.Visible = false;
             btnEditar.Click += btnEditar_Click;
             // 
-            // button1
+            // btnMarcarImpedimento
             // 
-            button1.Location = new Point(647, 630);
-            button1.Name = "button1";
-            button1.Size = new Size(172, 35);
-            button1.TabIndex = 10;
-            button1.Text = "Com impedimento";
-            button1.UseVisualStyleBackColor = true;
+            btnMarcarImpedimento.Location = new Point(647, 630);
+            btnMarcarImpedimento.Name = "btnMarcarImpedimento";
+            btnMarcarImpedimento.Size = new Size(172, 35);
+            btnMarcarImpedimento.TabIndex = 10;
+            btnMarcarImpedimento.Text = "Com impedimento";
+            btnMarcarImpedimento.UseVisualStyleBackColor = true;
+            btnMarcarImpedimento.Click += btnMarcarImpedimento_Click;
             // 
-            // label1
+            // lblMarcarComo
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(506, 630);
-            label1.Name = "label1";
-            label1.Size = new Size(126, 25);
-            label1.TabIndex = 11;
-            label1.Text = "Marcar como: ";
-            label1.Click += label1_Click;
+            lblMarcarComo.AutoSize = true;
+            lblMarcarComo.Location = new Point(506, 630);
+            lblMarcarComo.Name = "lblMarcarComo";
+            lblMarcarComo.Size = new Size(126, 25);
+            lblMarcarComo.TabIndex = 11;
+            lblMarcarComo.Text = "Marcar como: ";
             // 
-            // button2
+            // btnMarcarAbandonada
             // 
-            button2.Location = new Point(843, 630);
-            button2.Name = "button2";
-            button2.Size = new Size(172, 35);
-            button2.TabIndex = 12;
-            button2.Text = "Abandonada";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnMarcarAbandonada.Location = new Point(843, 630);
+            btnMarcarAbandonada.Name = "btnMarcarAbandonada";
+            btnMarcarAbandonada.Size = new Size(172, 35);
+            btnMarcarAbandonada.TabIndex = 12;
+            btnMarcarAbandonada.Text = "Abandonada";
+            btnMarcarAbandonada.UseVisualStyleBackColor = true;
+            btnMarcarAbandonada.Click += btnMarcarAbandonada_Click;
             // 
-            // button3
+            // btnMarcarConcluida
             // 
-            button3.AutoSize = true;
-            button3.Location = new Point(647, 684);
-            button3.Name = "button3";
-            button3.Size = new Size(172, 35);
-            button3.TabIndex = 13;
-            button3.Text = "Concluída (análise)";
-            button3.UseVisualStyleBackColor = true;
+            btnMarcarConcluida.AutoSize = true;
+            btnMarcarConcluida.Location = new Point(647, 684);
+            btnMarcarConcluida.Name = "btnMarcarConcluida";
+            btnMarcarConcluida.Size = new Size(172, 35);
+            btnMarcarConcluida.TabIndex = 13;
+            btnMarcarConcluida.Text = "Concluída (análise)";
+            btnMarcarConcluida.UseVisualStyleBackColor = true;
+            btnMarcarConcluida.Click += btnMarcarConcluida_Click;
             // 
-            // button4
+            // btnMarcarAtrasada
             // 
-            button4.Location = new Point(843, 684);
-            button4.Name = "button4";
-            button4.Size = new Size(172, 35);
-            button4.TabIndex = 14;
-            button4.Text = "Atrasada";
-            button4.UseVisualStyleBackColor = true;
+            btnMarcarAtrasada.Location = new Point(843, 684);
+            btnMarcarAtrasada.Name = "btnMarcarAtrasada";
+            btnMarcarAtrasada.Size = new Size(172, 35);
+            btnMarcarAtrasada.TabIndex = 14;
+            btnMarcarAtrasada.Text = "Atrasada";
+            btnMarcarAtrasada.UseVisualStyleBackColor = true;
+            btnMarcarAtrasada.Click += btnMarcarAtrasada_Click;
             // 
             // DeveloperTaskViewerForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1143, 750);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(label1);
-            Controls.Add(button1);
+            Controls.Add(btnMarcarAtrasada);
+            Controls.Add(btnMarcarConcluida);
+            Controls.Add(btnMarcarAbandonada);
+            Controls.Add(lblMarcarComo);
+            Controls.Add(btnMarcarImpedimento);
             Controls.Add(btnEditar);
             Controls.Add(lblStatusBox);
             Controls.Add(cbboxStatus);
@@ -237,10 +239,10 @@
         private ComboBox cbboxStatus;
         private Label lblStatusBox;
         private Button btnEditar;
-        private Button button1;
-        private Label label1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btnMarcarImpedimento;
+        private Label lblMarcarComo;
+        private Button btnMarcarAbandonada;
+        private Button btnMarcarConcluida;
+        private Button btnMarcarAtrasada;
     }
 }
