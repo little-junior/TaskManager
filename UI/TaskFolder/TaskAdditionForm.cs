@@ -29,10 +29,10 @@ namespace UI.Task
             developerService = new DeveloperService(new DeveloperDataManagement());
             techLeaderService = new TechLeaderService(new TechLeaderDataManagement());
 
-            ArrayList developers= new ArrayList(developerService.GetDevelopers());
-            developers.AddRange(techLeaderService.GetTechLeaders());
+            ArrayList users= new ArrayList(developerService.GetDevelopers());
+            users.AddRange(techLeaderService.GetTechLeaders());
             var techLeaders = techLeaderService.GetTechLeaders();
-            PreencherComboBoxResponsaveis(developers);
+            PreencherComboBoxResponsaveis(users);
 
 
             if (user is RealUsers.Developer)
