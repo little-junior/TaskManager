@@ -50,6 +50,7 @@ namespace ModelLayer.Task
         public void SetApproved()
         {
             Approved = true;
+            UpdateStatus(Status.EmAndamento);
         }
 
         public void UpdateResponsible(User responsible)
@@ -65,6 +66,11 @@ namespace ModelLayer.Task
         public void UpdateDescription(string description)
         {
             Description = description;
+        }
+
+        public void UpdateDaySpan(int taskDaySpan)
+        {
+            TaskDaySpan = taskDaySpan;
         }
     }
 }
