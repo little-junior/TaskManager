@@ -18,16 +18,16 @@ namespace UI
     {
         private readonly IAuthenticationService _authenticationService;
 
-        
+
 
         public LoginForm(IAuthenticationService authenticationService)
         {
             InitializeComponent();
             _authenticationService = authenticationService;
-            
+
         }
 
-        
+
         private void button1_Click(object sender, EventArgs e)
         {
             string keyAccess = textBox1.Text;
@@ -65,8 +65,10 @@ namespace UI
                 MessageBox.Show("USUARIO NAO ENCONTRADO. TENTE NOVAMENTE");
             }
 
-            
+
 
         }
+
+        
     }
 }

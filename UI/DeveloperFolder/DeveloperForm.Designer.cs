@@ -36,54 +36,77 @@
             // 
             // btnAddTask
             // 
-            btnAddTask.Location = new Point(292, 282);
+            btnAddTask.BackColor = Color.Transparent;
+            btnAddTask.Cursor = Cursors.Hand;
+            btnAddTask.Font = new Font("Microsoft Sans Serif", 13F);
+            btnAddTask.ForeColor = Color.Blue;
+            btnAddTask.Location = new Point(444, 482);
+            btnAddTask.Margin = new Padding(4, 5, 4, 5);
             btnAddTask.Name = "btnAddTask";
-            btnAddTask.Size = new Size(177, 51);
+            btnAddTask.Size = new Size(253, 85);
             btnAddTask.TabIndex = 0;
             btnAddTask.Text = "Adicionar Tarefa";
-            btnAddTask.UseVisualStyleBackColor = true;
+            btnAddTask.UseVisualStyleBackColor = false;
             btnAddTask.Click += btnAddTask_Click;
             // 
             // button2
             // 
-            button2.Location = new Point(292, 169);
+            button2.BackColor = Color.Transparent;
+            button2.Cursor = Cursors.Hand;
+            button2.Font = new Font("Microsoft Sans Serif", 13F);
+            button2.ForeColor = Color.Blue;
+            button2.Location = new Point(444, 294);
+            button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
-            button2.Size = new Size(177, 51);
+            button2.Size = new Size(253, 85);
             button2.TabIndex = 1;
             button2.Text = "Ver Tarefas";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // lblData
             // 
             lblData.AutoSize = true;
-            lblData.Location = new Point(12, 20);
+            lblData.Cursor = Cursors.Hand;
+            lblData.Font = new Font("Verdana", 11F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblData.ForeColor = Color.FromArgb(64, 64, 64);
+            lblData.Location = new Point(403, 9);
+            lblData.Margin = new Padding(4, 0, 4, 0);
             lblData.Name = "lblData";
-            lblData.Size = new Size(31, 15);
+            lblData.Size = new Size(70, 26);
             lblData.TabIndex = 2;
             lblData.Text = "Data";
+            lblData.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblInfos
             // 
             lblInfos.AutoSize = true;
-            lblInfos.Location = new Point(12, 54);
+            lblInfos.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblInfos.Location = new Point(13, 118);
+            lblInfos.Margin = new Padding(4, 0, 4, 0);
             lblInfos.Name = "lblInfos";
-            lblInfos.Size = new Size(33, 15);
+            lblInfos.Size = new Size(69, 29);
             lblInfos.TabIndex = 3;
             lblInfos.Text = "Infos";
             // 
             // DeveloperForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(1143, 750);
             Controls.Add(lblInfos);
             Controls.Add(lblData);
             Controls.Add(button2);
             Controls.Add(btnAddTask);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
             Name = "DeveloperForm";
-            Text = "DeveloperForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Início";
             FormClosed += DeveloperForm_FormClosed;
+            Load += DeveloperForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

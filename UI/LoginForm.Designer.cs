@@ -28,17 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             button1 = new Button();
             textBox1 = new TextBox();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(477, 472);
-            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Font = new Font("Segoe UI", 12F);
+            button1.Location = new Point(539, 730);
+            button1.Margin = new Padding(4, 6, 4, 6);
             button1.Name = "button1";
-            button1.Size = new Size(107, 38);
+            button1.Size = new Size(143, 55);
             button1.TabIndex = 0;
             button1.Text = "Entrar";
             button1.UseVisualStyleBackColor = true;
@@ -46,33 +50,57 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(441, 348);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
+            textBox1.Font = new Font("Segoe UI", 12F);
+            textBox1.Location = new Point(575, 597);
+            textBox1.Margin = new Padding(4, 6, 4, 6);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(373, 31);
+            textBox1.PasswordChar = '*';
+            textBox1.Size = new Size(410, 39);
             textBox1.TabIndex = 1;
+            textBox1.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(143, 351);
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.Location = new Point(187, 600);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(228, 25);
+            label1.Size = new Size(306, 32);
             label1.TabIndex = 2;
             label1.Text = "Digite sua chave de acesso:";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.BackgroundImageLayout = ImageLayout.None;
+            pictureBox1.Image = Properties.Resources.TaskManagerLogo;
+            pictureBox1.Location = new Point(248, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(770, 573);
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1143, 750);
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(1257, 840);
+            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Controls.Add(button1);
-            Margin = new Padding(4, 5, 4, 5);
+            Font = new Font("Segoe UI", 10F);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 6, 4, 6);
+            MaximizeBox = false;
             Name = "LoginForm";
-            Text = "LoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -82,5 +110,6 @@
         private Button button1;
         private TextBox textBox1;
         private Label label1;
+        private PictureBox pictureBox1;
     }
 }

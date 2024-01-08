@@ -43,5 +43,10 @@ namespace UI.Developer
         {
             Application.Exit();
         }
+
+        private void DeveloperForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

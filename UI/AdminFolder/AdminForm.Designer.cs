@@ -29,48 +29,61 @@
         private void InitializeComponent()
         {
             lblData = new Label();
-            lblInfo = new Label();
             btnAddTechLeader = new Button();
+            lblInfos = new Label();
             SuspendLayout();
             // 
             // lblData
             // 
             lblData.AutoSize = true;
-            lblData.Location = new Point(23, 27);
+            lblData.Font = new Font("Verdana", 11F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblData.ForeColor = Color.FromArgb(64, 64, 64);
+            lblData.Location = new Point(403, 9);
+            lblData.Margin = new Padding(4, 0, 4, 0);
             lblData.Name = "lblData";
-            lblData.Size = new Size(38, 15);
+            lblData.Size = new Size(70, 26);
             lblData.TabIndex = 0;
-            lblData.Text = "label1";
-            // 
-            // lblInfo
-            // 
-            lblInfo.AutoSize = true;
-            lblInfo.Location = new Point(23, 73);
-            lblInfo.Name = "lblInfo";
-            lblInfo.Size = new Size(83, 15);
-            lblInfo.TabIndex = 1;
-            lblInfo.Text = "Administrador";
+            lblData.Text = "Data";
             // 
             // btnAddTechLeader
             // 
-            btnAddTechLeader.Location = new Point(273, 208);
+            btnAddTechLeader.Cursor = Cursors.Hand;
+            btnAddTechLeader.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddTechLeader.ForeColor = Color.Blue;
+            btnAddTechLeader.Location = new Point(403, 344);
+            btnAddTechLeader.Margin = new Padding(4, 5, 4, 5);
             btnAddTechLeader.Name = "btnAddTechLeader";
-            btnAddTechLeader.Size = new Size(209, 61);
+            btnAddTechLeader.Size = new Size(336, 118);
             btnAddTechLeader.TabIndex = 2;
             btnAddTechLeader.Text = "Adicionar Tech Leader";
             btnAddTechLeader.UseVisualStyleBackColor = true;
             btnAddTechLeader.Click += btnAddTechLeader_Click;
             // 
+            // lblInfos
+            // 
+            lblInfos.AutoSize = true;
+            lblInfos.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblInfos.Location = new Point(13, 118);
+            lblInfos.Margin = new Padding(4, 0, 4, 0);
+            lblInfos.Name = "lblInfos";
+            lblInfos.Size = new Size(175, 29);
+            lblInfos.TabIndex = 7;
+            lblInfos.Text = "Administrador";
+            // 
             // AdminForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
+            Controls.Add(lblInfos);
             Controls.Add(btnAddTechLeader);
-            Controls.Add(lblInfo);
             Controls.Add(lblData);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
             Name = "AdminForm";
-            Text = "AdminForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Início";
             FormClosed += AdminForm_FormClosed;
             ResumeLayout(false);
             PerformLayout();
@@ -79,7 +92,7 @@
         #endregion
 
         private Label lblData;
-        private Label lblInfo;
         private Button btnAddTechLeader;
+        private Label lblInfos;
     }
 }

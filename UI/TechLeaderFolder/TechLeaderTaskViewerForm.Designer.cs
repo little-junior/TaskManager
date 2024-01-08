@@ -46,9 +46,11 @@
             // 
             // btnEditar
             // 
-            btnEditar.Location = new Point(1018, 529);
+            btnEditar.AutoSize = true;
+            btnEditar.Font = new Font("Segoe UI", 11F);
+            btnEditar.Location = new Point(1019, 521);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(112, 34);
+            btnEditar.Size = new Size(112, 40);
             btnEditar.TabIndex = 19;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
@@ -58,28 +60,31 @@
             // lblStatusBox
             // 
             lblStatusBox.AutoSize = true;
+            lblStatusBox.Font = new Font("Segoe UI", 10F);
             lblStatusBox.Location = new Point(12, 33);
             lblStatusBox.Name = "lblStatusBox";
-            lblStatusBox.Size = new Size(64, 25);
+            lblStatusBox.Size = new Size(69, 28);
             lblStatusBox.TabIndex = 18;
             lblStatusBox.Text = "Status:";
             // 
             // cbboxStatus
             // 
+            cbboxStatus.Font = new Font("Segoe UI", 10F);
             cbboxStatus.FormattingEnabled = true;
             cbboxStatus.Location = new Point(240, 30);
             cbboxStatus.Name = "cbboxStatus";
-            cbboxStatus.Size = new Size(230, 33);
+            cbboxStatus.Size = new Size(230, 36);
             cbboxStatus.TabIndex = 17;
             cbboxStatus.SelectedIndexChanged += cbboxStatus_SelectedIndexChanged;
             // 
             // lblStatus
             // 
             lblStatus.AutoSize = true;
+            lblStatus.Font = new Font("Segoe UI", 12F);
             lblStatus.Location = new Point(506, 487);
             lblStatus.Margin = new Padding(4, 0, 4, 0);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(69, 25);
+            lblStatus.Size = new Size(90, 32);
             lblStatus.TabIndex = 16;
             lblStatus.Text = "Status: ";
             lblStatus.Visible = false;
@@ -87,10 +92,11 @@
             // lblAprovada
             // 
             lblAprovada.AutoSize = true;
-            lblAprovada.Location = new Point(502, 390);
+            lblAprovada.Font = new Font("Segoe UI", 12F);
+            lblAprovada.Location = new Point(506, 428);
             lblAprovada.Margin = new Padding(4, 0, 4, 0);
             lblAprovada.Name = "lblAprovada";
-            lblAprovada.Size = new Size(103, 25);
+            lblAprovada.Size = new Size(133, 32);
             lblAprovada.TabIndex = 15;
             lblAprovada.Text = "Aprovada? ";
             lblAprovada.Visible = false;
@@ -98,10 +104,11 @@
             // lblDuracao
             // 
             lblDuracao.AutoSize = true;
-            lblDuracao.Location = new Point(505, 337);
+            lblDuracao.Font = new Font("Segoe UI", 12F);
+            lblDuracao.Location = new Point(505, 357);
             lblDuracao.Margin = new Padding(4, 0, 4, 0);
             lblDuracao.Name = "lblDuracao";
-            lblDuracao.Size = new Size(139, 25);
+            lblDuracao.Size = new Size(184, 32);
             lblDuracao.TabIndex = 14;
             lblDuracao.Text = "Duração (dias) : ";
             lblDuracao.Visible = false;
@@ -109,16 +116,18 @@
             // lblResponsavel
             // 
             lblResponsavel.AutoSize = true;
-            lblResponsavel.Location = new Point(505, 280);
+            lblResponsavel.Font = new Font("Segoe UI", 12F);
+            lblResponsavel.Location = new Point(505, 283);
             lblResponsavel.Margin = new Padding(4, 0, 4, 0);
             lblResponsavel.Name = "lblResponsavel";
-            lblResponsavel.Size = new Size(119, 25);
+            lblResponsavel.Size = new Size(157, 32);
             lblResponsavel.TabIndex = 13;
             lblResponsavel.Text = "Responsável: ";
             lblResponsavel.Visible = false;
             // 
             // lblDescricao
             // 
+            lblDescricao.Font = new Font("Segoe UI", 12F);
             lblDescricao.Location = new Point(505, 153);
             lblDescricao.Margin = new Padding(4, 0, 4, 0);
             lblDescricao.Name = "lblDescricao";
@@ -130,30 +139,34 @@
             // lblNome
             // 
             lblNome.AutoSize = true;
+            lblNome.Font = new Font("Segoe UI", 12F);
             lblNome.Location = new Point(505, 92);
             lblNome.Margin = new Padding(4, 0, 4, 0);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(70, 25);
+            lblNome.Size = new Size(92, 32);
             lblNome.TabIndex = 11;
             lblNome.Text = "Nome: ";
             lblNome.Visible = false;
             // 
             // lboxTasks
             // 
+            lboxTasks.Font = new Font("Segoe UI", 11F);
             lboxTasks.FormattingEnabled = true;
-            lboxTasks.ItemHeight = 25;
+            lboxTasks.ItemHeight = 30;
             lboxTasks.Location = new Point(12, 92);
             lboxTasks.Margin = new Padding(4, 5, 4, 5);
             lboxTasks.Name = "lboxTasks";
-            lboxTasks.Size = new Size(458, 629);
+            lboxTasks.Size = new Size(458, 604);
             lboxTasks.TabIndex = 10;
             lboxTasks.SelectedIndexChanged += lboxTasks_SelectedIndexChanged_1;
             // 
             // btnAprovar
             // 
-            btnAprovar.Location = new Point(689, 568);
+            btnAprovar.AutoSize = true;
+            btnAprovar.Font = new Font("Segoe UI", 11F);
+            btnAprovar.Location = new Point(679, 599);
             btnAprovar.Name = "btnAprovar";
-            btnAprovar.Size = new Size(222, 34);
+            btnAprovar.Size = new Size(272, 40);
             btnAprovar.TabIndex = 20;
             btnAprovar.Text = "Aprovar Tarefa";
             btnAprovar.UseVisualStyleBackColor = true;
@@ -163,9 +176,10 @@
             // btnNegar
             // 
             btnNegar.AutoSize = true;
-            btnNegar.Location = new Point(689, 632);
+            btnNegar.Font = new Font("Segoe UI", 11F);
+            btnNegar.Location = new Point(679, 663);
             btnNegar.Name = "btnNegar";
-            btnNegar.Size = new Size(222, 35);
+            btnNegar.Size = new Size(272, 40);
             btnNegar.TabIndex = 21;
             btnNegar.Text = "Negar Tarefa (abandonar)";
             btnNegar.UseVisualStyleBackColor = true;
@@ -174,9 +188,11 @@
             // 
             // btnMarcarConcluida
             // 
-            btnMarcarConcluida.Location = new Point(519, 568);
+            btnMarcarConcluida.AutoSize = true;
+            btnMarcarConcluida.Font = new Font("Segoe UI", 11F);
+            btnMarcarConcluida.Location = new Point(679, 599);
             btnMarcarConcluida.Name = "btnMarcarConcluida";
-            btnMarcarConcluida.Size = new Size(220, 34);
+            btnMarcarConcluida.Size = new Size(272, 40);
             btnMarcarConcluida.TabIndex = 22;
             btnMarcarConcluida.Text = "Marcar como Concluída";
             btnMarcarConcluida.UseVisualStyleBackColor = true;
@@ -186,9 +202,10 @@
             // btnDevolver
             // 
             btnDevolver.AutoSize = true;
-            btnDevolver.Location = new Point(594, 632);
+            btnDevolver.Font = new Font("Segoe UI", 11F);
+            btnDevolver.Location = new Point(679, 663);
             btnDevolver.Name = "btnDevolver";
-            btnDevolver.Size = new Size(220, 35);
+            btnDevolver.Size = new Size(272, 40);
             btnDevolver.TabIndex = 23;
             btnDevolver.Text = "Devolver ao Responsável";
             btnDevolver.UseVisualStyleBackColor = true;
@@ -214,8 +231,11 @@
             Controls.Add(lblDescricao);
             Controls.Add(lblNome);
             Controls.Add(lboxTasks);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "TechLeaderTaskViewerForm";
-            Text = "TechLeaderTaskViewerForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Gerenciar Tarefas";
             ResumeLayout(false);
             PerformLayout();
         }

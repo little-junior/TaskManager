@@ -50,7 +50,7 @@ namespace UI.TaskFolder
 
         private void PreencherComboBoxStatus()
         {
-            
+
             foreach (Status status in Enum.GetValues(typeof(Status)))
             {
                 if (status == Status.ASerAprovada || status == Status.EmAnalise || status == Status.Concluida)
@@ -58,7 +58,7 @@ namespace UI.TaskFolder
                 cbboxStatus.Items.Add(status.ToString());
             }
 
-            
+
 
         }
 
@@ -86,8 +86,8 @@ namespace UI.TaskFolder
             var duracaoAtualizada = (int)numericTempo.Value;
             var statusAtualizado = Enum.Parse<Status>(cbboxStatus.SelectedItem.ToString());
 
-            tarefasLista.First(t => t.Id ==  _taskAtual.Id).UpdateName(nomeAtualizado);
-            tarefasLista.First(t => t.Id ==  _taskAtual.Id).UpdateDescription(descricaoAtualizada);
+            tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateName(nomeAtualizado);
+            tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateDescription(descricaoAtualizada);
             tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateStatus(statusAtualizado);
             tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateResponsible(responsavelAtualizado);
             tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateDaySpan(duracaoAtualizada);
@@ -102,6 +102,11 @@ namespace UI.TaskFolder
             {
                 MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

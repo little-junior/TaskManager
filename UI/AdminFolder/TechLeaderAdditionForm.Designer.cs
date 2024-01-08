@@ -42,25 +42,29 @@
             // cbboxArea
             // 
             cbboxArea.FormattingEnabled = true;
-            cbboxArea.Location = new Point(287, 237);
+            cbboxArea.Location = new Point(617, 519);
+            cbboxArea.Margin = new Padding(5, 6, 5, 6);
             cbboxArea.Name = "cbboxArea";
-            cbboxArea.Size = new Size(178, 23);
+            cbboxArea.Size = new Size(328, 40);
             cbboxArea.TabIndex = 17;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(700, 402);
+            btnCancelar.Location = new Point(1300, 861);
+            btnCancelar.Margin = new Padding(5, 6, 5, 6);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.Size = new Size(157, 46);
             btnCancelar.TabIndex = 16;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnAdicionar
             // 
-            btnAdicionar.Location = new Point(581, 402);
+            btnAdicionar.Location = new Point(1079, 861);
+            btnAdicionar.Margin = new Padding(5, 6, 5, 6);
             btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(75, 23);
+            btnAdicionar.Size = new Size(157, 46);
             btnAdicionar.TabIndex = 15;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
@@ -68,59 +72,69 @@
             // 
             // txtboxEmail
             // 
-            txtboxEmail.Location = new Point(287, 193);
+            txtboxEmail.Location = new Point(617, 425);
+            txtboxEmail.Margin = new Padding(5, 6, 5, 6);
             txtboxEmail.Name = "txtboxEmail";
-            txtboxEmail.Size = new Size(239, 23);
+            txtboxEmail.Size = new Size(441, 39);
             txtboxEmail.TabIndex = 14;
             // 
             // txtboxNome
             // 
-            txtboxNome.Location = new Point(287, 154);
+            txtboxNome.Location = new Point(617, 342);
+            txtboxNome.Margin = new Padding(5, 6, 5, 6);
             txtboxNome.Name = "txtboxNome";
-            txtboxNome.Size = new Size(239, 23);
+            txtboxNome.Size = new Size(441, 39);
             txtboxNome.TabIndex = 13;
             // 
             // lblArea
             // 
             lblArea.AutoSize = true;
-            lblArea.Location = new Point(151, 240);
+            lblArea.Font = new Font("Segoe UI", 12F);
+            lblArea.Location = new Point(288, 522);
+            lblArea.Margin = new Padding(5, 0, 5, 0);
             lblArea.Name = "lblArea";
-            lblArea.Size = new Size(37, 15);
+            lblArea.Size = new Size(74, 32);
             lblArea.TabIndex = 12;
             lblArea.Text = "Área: ";
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(151, 193);
+            lblEmail.Font = new Font("Segoe UI", 12F);
+            lblEmail.Location = new Point(288, 422);
+            lblEmail.Margin = new Padding(5, 0, 5, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(42, 15);
+            lblEmail.Size = new Size(83, 32);
             lblEmail.TabIndex = 11;
             lblEmail.Text = "Email: ";
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(151, 157);
+            lblNome.Font = new Font("Segoe UI", 12F);
+            lblNome.Location = new Point(288, 345);
+            lblNome.Margin = new Padding(5, 0, 5, 0);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(119, 15);
+            lblNome.Size = new Size(243, 32);
             lblNome.TabIndex = 10;
             lblNome.Text = "Nome e Sobrenome: ";
             // 
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(25, 25);
+            lblTitle.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(47, 54);
+            lblTitle.Margin = new Padding(5, 0, 5, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(123, 15);
+            lblTitle.Size = new Size(388, 36);
             lblTitle.TabIndex = 9;
             lblTitle.Text = "Adicionar Tech Leader";
             // 
             // TechLeaderAdditionForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1486, 960);
             Controls.Add(cbboxArea);
             Controls.Add(btnCancelar);
             Controls.Add(btnAdicionar);
@@ -130,8 +144,13 @@
             Controls.Add(lblEmail);
             Controls.Add(lblNome);
             Controls.Add(lblTitle);
+            Font = new Font("Segoe UI", 12F);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(5, 6, 5, 6);
+            MaximizeBox = false;
             Name = "TechLeaderAdditionForm";
-            Text = "TechLeaderAdditionForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Adicionar TechLeader";
             ResumeLayout(false);
             PerformLayout();
         }

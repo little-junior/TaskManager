@@ -29,7 +29,7 @@ namespace UI.Task
             developerService = new DeveloperService(new DeveloperDataManagement());
             techLeaderService = new TechLeaderService(new TechLeaderDataManagement());
 
-            ArrayList users= new ArrayList(developerService.GetDevelopers());
+            ArrayList users = new ArrayList(developerService.GetDevelopers());
             users.AddRange(techLeaderService.GetTechLeaders());
             var techLeaders = techLeaderService.GetTechLeaders();
             PreencherComboBoxResponsaveis(users);
@@ -64,7 +64,7 @@ namespace UI.Task
 
             if (user is RealUsers.Developer)
             {
-                
+
                 task = new RealTask.Task(name: nomeTarefa, description: descricaoTarefa, responsible: responsavelTarefa);
             }
             else
@@ -102,7 +102,12 @@ namespace UI.Task
             cbboxResponsavel.ValueMember = "Id";
 
             cbboxResponsavel.DataSource = users;
-            
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

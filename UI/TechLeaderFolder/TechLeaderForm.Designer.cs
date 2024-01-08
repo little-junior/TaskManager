@@ -30,16 +30,17 @@
         {
             btnAddDev = new Button();
             btnGerTasks = new Button();
+            btnAddTask = new Button();
             lblData = new Label();
             lblInfos = new Label();
-            btnAddTask = new Button();
             SuspendLayout();
             // 
             // btnAddDev
             // 
             btnAddDev.Cursor = Cursors.Hand;
-            btnAddDev.Font = new Font("Segoe UI", 11F);
-            btnAddDev.Location = new Point(403, 585);
+            btnAddDev.Font = new Font("Microsoft Sans Serif", 13F);
+            btnAddDev.ForeColor = Color.Blue;
+            btnAddDev.Location = new Point(444, 585);
             btnAddDev.Margin = new Padding(4, 5, 4, 5);
             btnAddDev.Name = "btnAddDev";
             btnAddDev.Size = new Size(301, 108);
@@ -50,7 +51,10 @@
             // 
             // btnGerTasks
             // 
-            btnGerTasks.Location = new Point(403, 398);
+            btnGerTasks.Cursor = Cursors.Hand;
+            btnGerTasks.Font = new Font("Microsoft Sans Serif", 13F);
+            btnGerTasks.ForeColor = Color.Blue;
+            btnGerTasks.Location = new Point(444, 398);
             btnGerTasks.Margin = new Padding(4, 5, 4, 5);
             btnGerTasks.Name = "btnGerTasks";
             btnGerTasks.Size = new Size(301, 108);
@@ -59,31 +63,12 @@
             btnGerTasks.UseVisualStyleBackColor = true;
             btnGerTasks.Click += btnGerTasks_Click;
             // 
-            // lblData
-            // 
-            lblData.AutoSize = true;
-            lblData.Location = new Point(517, 15);
-            lblData.Margin = new Padding(4, 0, 4, 0);
-            lblData.Name = "lblData";
-            lblData.Size = new Size(49, 25);
-            lblData.TabIndex = 2;
-            lblData.Text = "Data";
-            // 
-            // lblInfos
-            // 
-            lblInfos.AutoSize = true;
-            lblInfos.Location = new Point(17, 75);
-            lblInfos.Margin = new Padding(4, 0, 4, 0);
-            lblInfos.Name = "lblInfos";
-            lblInfos.Size = new Size(52, 25);
-            lblInfos.TabIndex = 3;
-            lblInfos.Text = "Infos";
-            // 
             // btnAddTask
             // 
             btnAddTask.Cursor = Cursors.Hand;
-            btnAddTask.Font = new Font("Segoe UI", 11F);
-            btnAddTask.Location = new Point(403, 212);
+            btnAddTask.Font = new Font("Microsoft Sans Serif", 13F);
+            btnAddTask.ForeColor = Color.Blue;
+            btnAddTask.Location = new Point(444, 212);
             btnAddTask.Margin = new Padding(4, 5, 4, 5);
             btnAddTask.Name = "btnAddTask";
             btnAddTask.Size = new Size(301, 108);
@@ -92,19 +77,45 @@
             btnAddTask.UseVisualStyleBackColor = true;
             btnAddTask.Click += btnAddTask_Click;
             // 
+            // lblData
+            // 
+            lblData.AutoSize = true;
+            lblData.Font = new Font("Verdana", 11F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblData.ForeColor = Color.FromArgb(64, 64, 64);
+            lblData.Location = new Point(403, 9);
+            lblData.Margin = new Padding(4, 0, 4, 0);
+            lblData.Name = "lblData";
+            lblData.Size = new Size(70, 26);
+            lblData.TabIndex = 5;
+            lblData.Text = "Data";
+            lblData.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblInfos
+            // 
+            lblInfos.AutoSize = true;
+            lblInfos.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblInfos.Location = new Point(13, 118);
+            lblInfos.Margin = new Padding(4, 0, 4, 0);
+            lblInfos.Name = "lblInfos";
+            lblInfos.Size = new Size(69, 29);
+            lblInfos.TabIndex = 6;
+            lblInfos.Text = "Infos";
+            // 
             // TechLeaderForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1143, 750);
-            Controls.Add(btnAddTask);
             Controls.Add(lblInfos);
             Controls.Add(lblData);
+            Controls.Add(btnAddTask);
             Controls.Add(btnGerTasks);
             Controls.Add(btnAddDev);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
             Name = "TechLeaderForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Início";
             FormClosed += TechLeaderForm_FormClosed;
             ResumeLayout(false);
@@ -115,8 +126,8 @@
 
         private Button btnAddDev;
         private Button btnGerTasks;
+        private Button btnAddTask;
         private Label lblData;
         private Label lblInfos;
-        private Button btnAddTask;
     }
 }

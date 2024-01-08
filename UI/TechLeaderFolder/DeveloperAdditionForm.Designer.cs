@@ -42,58 +42,72 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(12, 19);
+            lblTitle.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(47, 54);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(139, 15);
+            lblTitle.Size = new Size(436, 36);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Adicionar Desenvolvedor";
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Location = new Point(138, 151);
+            lblNome.Font = new Font("Segoe UI", 12F);
+            lblNome.Location = new Point(288, 345);
+            lblNome.Margin = new Padding(4, 0, 4, 0);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(119, 15);
+            lblNome.Size = new Size(243, 32);
             lblNome.TabIndex = 1;
             lblNome.Text = "Nome e Sobrenome: ";
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Location = new Point(138, 187);
+            lblEmail.Font = new Font("Segoe UI", 12F);
+            lblEmail.Location = new Point(288, 422);
+            lblEmail.Margin = new Padding(4, 0, 4, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(42, 15);
+            lblEmail.Size = new Size(83, 32);
             lblEmail.TabIndex = 2;
             lblEmail.Text = "Email: ";
             // 
             // lblArea
             // 
             lblArea.AutoSize = true;
-            lblArea.Location = new Point(138, 234);
+            lblArea.Font = new Font("Segoe UI", 12F);
+            lblArea.Location = new Point(288, 522);
+            lblArea.Margin = new Padding(4, 0, 4, 0);
             lblArea.Name = "lblArea";
-            lblArea.Size = new Size(37, 15);
+            lblArea.Size = new Size(74, 32);
             lblArea.TabIndex = 3;
             lblArea.Text = "Área: ";
             // 
             // txtboxNome
             // 
-            txtboxNome.Location = new Point(274, 148);
+            txtboxNome.Font = new Font("Segoe UI", 12F);
+            txtboxNome.Location = new Point(617, 342);
+            txtboxNome.Margin = new Padding(4, 5, 4, 5);
             txtboxNome.Name = "txtboxNome";
-            txtboxNome.Size = new Size(239, 23);
+            txtboxNome.Size = new Size(386, 39);
             txtboxNome.TabIndex = 4;
             // 
             // txtboxEmail
             // 
-            txtboxEmail.Location = new Point(274, 187);
+            txtboxEmail.Font = new Font("Segoe UI", 12F);
+            txtboxEmail.Location = new Point(617, 425);
+            txtboxEmail.Margin = new Padding(4, 5, 4, 5);
             txtboxEmail.Name = "txtboxEmail";
-            txtboxEmail.Size = new Size(239, 23);
+            txtboxEmail.Size = new Size(386, 39);
             txtboxEmail.TabIndex = 5;
             // 
             // btnAdicionar
             // 
-            btnAdicionar.Location = new Point(568, 396);
+            btnAdicionar.Font = new Font("Segoe UI", 12F);
+            btnAdicionar.Location = new Point(1079, 861);
+            btnAdicionar.Margin = new Padding(4, 5, 4, 5);
             btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(75, 23);
+            btnAdicionar.Size = new Size(157, 46);
             btnAdicionar.TabIndex = 6;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
@@ -101,9 +115,11 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(687, 396);
+            btnCancelar.Font = new Font("Segoe UI", 12F);
+            btnCancelar.Location = new Point(1300, 861);
+            btnCancelar.Margin = new Padding(4, 5, 4, 5);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(75, 23);
+            btnCancelar.Size = new Size(157, 46);
             btnCancelar.TabIndex = 7;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -111,17 +127,19 @@
             // 
             // cbboxArea
             // 
+            cbboxArea.Font = new Font("Segoe UI", 12F);
             cbboxArea.FormattingEnabled = true;
-            cbboxArea.Location = new Point(274, 231);
+            cbboxArea.Location = new Point(617, 519);
+            cbboxArea.Margin = new Padding(4, 5, 4, 5);
             cbboxArea.Name = "cbboxArea";
-            cbboxArea.Size = new Size(178, 23);
+            cbboxArea.Size = new Size(328, 40);
             cbboxArea.TabIndex = 8;
             // 
             // DeveloperAdditionForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1532, 960);
             Controls.Add(cbboxArea);
             Controls.Add(btnCancelar);
             Controls.Add(btnAdicionar);
@@ -131,8 +149,12 @@
             Controls.Add(lblEmail);
             Controls.Add(lblNome);
             Controls.Add(lblTitle);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 5, 4, 5);
+            MaximizeBox = false;
             Name = "DeveloperAdditionForm";
-            Text = "DeveloperAdditionForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Adicionar Desenvolvedor";
             ResumeLayout(false);
             PerformLayout();
         }
