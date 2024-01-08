@@ -52,6 +52,7 @@ O seguinte projeto aborda a construção de um Gerenciador de Tarefas utilizando
     - Encapsulamento
     - etc
 - Divisão e arquitetura de projetos
+- Windows Forms
 - Armazenamento e recuperação de dados via JSON 
 
 ## 🤝 Como colaborar
