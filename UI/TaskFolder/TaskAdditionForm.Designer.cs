@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskAdditionForm));
             radiobtnSim = new RadioButton();
             txtboxNome = new TextBox();
             txtboxDescricao = new TextBox();
@@ -221,6 +222,7 @@
             Controls.Add(txtboxNome);
             Controls.Add(radiobtnSim);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             Name = "TaskAdditionForm";

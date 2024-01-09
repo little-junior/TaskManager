@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeveloperForm));
             btnAddTask = new Button();
             button2 = new Button();
             lblData = new Label();
@@ -100,6 +101,7 @@
             Controls.Add(button2);
             Controls.Add(btnAddTask);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             Name = "DeveloperForm";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeveloperTaskViewerForm));
             lboxTasks = new ListBox();
             lblNome = new Label();
             lblDescricao = new Label();
@@ -239,6 +240,7 @@
             Controls.Add(lblNome);
             Controls.Add(lboxTasks);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             Name = "DeveloperTaskViewerForm";

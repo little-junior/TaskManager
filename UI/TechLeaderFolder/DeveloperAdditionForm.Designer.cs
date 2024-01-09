@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeveloperAdditionForm));
             lblTitle = new Label();
             lblNome = new Label();
             lblEmail = new Label();
@@ -150,6 +151,7 @@
             Controls.Add(lblNome);
             Controls.Add(lblTitle);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             Name = "DeveloperAdditionForm";

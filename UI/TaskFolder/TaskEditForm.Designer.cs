@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskEditForm));
             btnCancelar = new Button();
             btnSalvar = new Button();
             lblTempo = new Label();
@@ -202,6 +203,7 @@
             Controls.Add(txtboxDescricao);
             Controls.Add(txtboxNome);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "TaskEditForm";
             StartPosition = FormStartPosition.CenterScreen;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TechLeaderForm));
             btnAddDev = new Button();
             btnGerTasks = new Button();
             btnAddTask = new Button();
@@ -112,6 +113,7 @@
             Controls.Add(btnGerTasks);
             Controls.Add(btnAddDev);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             Name = "TechLeaderForm";

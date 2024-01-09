@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             lblData = new Label();
             btnAddTechLeader = new Button();
             lblInfos = new Label();
@@ -79,6 +80,7 @@
             Controls.Add(btnAddTechLeader);
             Controls.Add(lblData);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             Name = "AdminForm";

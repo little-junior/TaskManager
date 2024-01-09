@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TechLeaderAdditionForm));
             cbboxArea = new ComboBox();
             btnCancelar = new Button();
             btnAdicionar = new Button();
@@ -146,6 +147,7 @@
             Controls.Add(lblTitle);
             Font = new Font("Segoe UI", 12F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(5, 6, 5, 6);
             MaximizeBox = false;
             Name = "TechLeaderAdditionForm";

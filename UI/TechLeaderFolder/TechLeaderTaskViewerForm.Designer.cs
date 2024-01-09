@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TechLeaderTaskViewerForm));
             btnEditar = new Button();
             lblStatusBox = new Label();
             cbboxStatus = new ComboBox();
@@ -232,6 +233,7 @@
             Controls.Add(lblNome);
             Controls.Add(lboxTasks);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "TechLeaderTaskViewerForm";
             StartPosition = FormStartPosition.CenterScreen;
