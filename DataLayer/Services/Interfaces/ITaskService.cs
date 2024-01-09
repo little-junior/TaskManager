@@ -11,5 +11,7 @@ namespace DataLayer.Services.Interfaces
     {
         void CreateTask(RealTask.Task task);
         List<RealTask.Task> GetTasks();
+
+        void UpdateTask(List<RealTask.Task> tasks);
     }
 }
