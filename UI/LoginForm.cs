@@ -32,6 +32,12 @@ namespace UI
         {
             string keyAccess = textBox1.Text;
 
+            if (KeyAccessBoxIsNullOrWhiteSpace(keyAccess) )
+            {
+                MessageBox.Show("A chave de acesso não pode ser vazia. Tente novamente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             var AuthenticatedTechLeader = _authenticationService.TechLeaderAuthenticate(keyAccess);
             var AuthenticatedDeveloper = _authenticationService.DeveloperAuthenticate(keyAccess);
 
@@ -67,6 +73,11 @@ namespace UI
 
 
 
+        }
+
+        private bool KeyAccessBoxIsNullOrWhiteSpace(string keyAccess)
+        {
+            return string.IsNullOrWhiteSpace(keyAccess);
         }
 
         

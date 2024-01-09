@@ -39,6 +39,12 @@ namespace UI.TechLeader
             var emailDev = txtboxEmail.Text;
             var areaDev = (Specializations)cbboxArea.SelectedItem;
 
+            if (TextBoxesIsNullOrWhiteSpace(nomeDev, emailDev))
+            {
+                MessageBox.Show("Os campos Nome e Email não podem ser vazios. Tente novamente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             var dev = new RealUsers.Developer(name: nomeDev, email: emailDev, specialization: areaDev);
 
             try
@@ -67,6 +73,11 @@ namespace UI.TechLeader
             
             cbboxArea.DataSource = specializationsArray;
 
+        }
+
+        private bool TextBoxesIsNullOrWhiteSpace(string name, string email)
+        {
+            return string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(email);
         }
     }
 }

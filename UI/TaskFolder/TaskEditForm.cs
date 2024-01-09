@@ -86,6 +86,12 @@ namespace UI.TaskFolder
             var duracaoAtualizada = (int)numericTempo.Value;
             var statusAtualizado = Enum.Parse<Status>(cbboxStatus.SelectedItem.ToString());
 
+            if (TextBoxesIsNullOrWhiteSpace(nomeAtualizado, descricaoAtualizada))
+            {
+                MessageBox.Show("Os campos Nome e Descrição não podem ser vazios. Tente novamente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateName(nomeAtualizado);
             tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateDescription(descricaoAtualizada);
             tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateStatus(statusAtualizado);
@@ -104,6 +110,10 @@ namespace UI.TaskFolder
             }
         }
 
+        private bool TextBoxesIsNullOrWhiteSpace(string name, string description)
+        {
+            return string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(description);
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();

@@ -62,6 +62,12 @@ namespace UI.Task
             var descricaoTarefa = txtboxDescricao.Text;
             var responsavelTarefa = user;
 
+            if (TextBoxesIsNullOrWhiteSpace(nomeTarefa, descricaoTarefa))
+            {
+                MessageBox.Show("Os campos Nome e Descrição não podem ser vazios. Tente novamente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (user is RealUsers.Developer)
             {
 
@@ -103,6 +109,11 @@ namespace UI.Task
 
             cbboxResponsavel.DataSource = users;
 
+        }
+
+        private bool TextBoxesIsNullOrWhiteSpace(string name, string description)
+        {
+            return string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(description);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

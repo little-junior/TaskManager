@@ -32,6 +32,12 @@ namespace UI.AdminFolder
             var techLeaderEmail = txtboxEmail.Text;
             var areaTechLeader = (Specializations)cbboxArea.SelectedItem;
 
+            if (TextBoxesIsNullOrWhiteSpace(techLeaderNome, techLeaderEmail))
+            {
+                MessageBox.Show("Os campos Nome e Email não podem ser vazios. Tente novamente", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             var techLeader = new RealUsers.TechLeader(name: techLeaderNome, email: techLeaderEmail, specialization: areaTechLeader);
 
             try
@@ -60,6 +66,11 @@ namespace UI.AdminFolder
             txtboxEmail.Text = string.Empty;
             txtboxNome.Text = string.Empty;
             cbboxArea.SelectedIndex = 0;
+        }
+
+        private bool TextBoxesIsNullOrWhiteSpace(string name, string email)
+        {
+            return string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(email);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
