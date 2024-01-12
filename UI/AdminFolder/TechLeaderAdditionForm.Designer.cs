@@ -43,15 +43,15 @@
             // cbboxArea
             // 
             cbboxArea.FormattingEnabled = true;
-            cbboxArea.Location = new Point(617, 519);
+            cbboxArea.Location = new Point(443, 388);
             cbboxArea.Margin = new Padding(5, 6, 5, 6);
             cbboxArea.Name = "cbboxArea";
-            cbboxArea.Size = new Size(328, 40);
+            cbboxArea.Size = new Size(328, 29);
             cbboxArea.TabIndex = 17;
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(1300, 861);
+            btnCancelar.Location = new Point(851, 501);
             btnCancelar.Margin = new Padding(5, 6, 5, 6);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(157, 46);
@@ -62,7 +62,7 @@
             // 
             // btnAdicionar
             // 
-            btnAdicionar.Location = new Point(1079, 861);
+            btnAdicionar.Location = new Point(663, 501);
             btnAdicionar.Margin = new Padding(5, 6, 5, 6);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(157, 46);
@@ -73,28 +73,28 @@
             // 
             // txtboxEmail
             // 
-            txtboxEmail.Location = new Point(617, 425);
+            txtboxEmail.Location = new Point(443, 294);
             txtboxEmail.Margin = new Padding(5, 6, 5, 6);
             txtboxEmail.Name = "txtboxEmail";
-            txtboxEmail.Size = new Size(441, 39);
+            txtboxEmail.Size = new Size(441, 29);
             txtboxEmail.TabIndex = 14;
             // 
             // txtboxNome
             // 
-            txtboxNome.Location = new Point(617, 342);
+            txtboxNome.Location = new Point(443, 211);
             txtboxNome.Margin = new Padding(5, 6, 5, 6);
             txtboxNome.Name = "txtboxNome";
-            txtboxNome.Size = new Size(441, 39);
+            txtboxNome.Size = new Size(441, 29);
             txtboxNome.TabIndex = 13;
             // 
             // lblArea
             // 
             lblArea.AutoSize = true;
             lblArea.Font = new Font("Segoe UI", 12F);
-            lblArea.Location = new Point(288, 522);
+            lblArea.Location = new Point(114, 391);
             lblArea.Margin = new Padding(5, 0, 5, 0);
             lblArea.Name = "lblArea";
-            lblArea.Size = new Size(74, 32);
+            lblArea.Size = new Size(49, 21);
             lblArea.TabIndex = 12;
             lblArea.Text = "Área: ";
             // 
@@ -102,10 +102,10 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 12F);
-            lblEmail.Location = new Point(288, 422);
+            lblEmail.Location = new Point(114, 291);
             lblEmail.Margin = new Padding(5, 0, 5, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(83, 32);
+            lblEmail.Size = new Size(55, 21);
             lblEmail.TabIndex = 11;
             lblEmail.Text = "Email: ";
             // 
@@ -113,10 +113,10 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI", 12F);
-            lblNome.Location = new Point(288, 345);
+            lblNome.Location = new Point(114, 214);
             lblNome.Margin = new Padding(5, 0, 5, 0);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(243, 32);
+            lblNome.Size = new Size(157, 21);
             lblNome.TabIndex = 10;
             lblNome.Text = "Nome e Sobrenome: ";
             // 
@@ -127,15 +127,15 @@
             lblTitle.Location = new Point(47, 54);
             lblTitle.Margin = new Padding(5, 0, 5, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(388, 36);
+            lblTitle.Size = new Size(262, 25);
             lblTitle.TabIndex = 9;
             lblTitle.Text = "Adicionar Tech Leader";
             // 
             // TechLeaderAdditionForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1486, 960);
+            ClientSize = new Size(1022, 562);
             Controls.Add(cbboxArea);
             Controls.Add(btnCancelar);
             Controls.Add(btnAdicionar);
