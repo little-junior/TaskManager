@@ -39,10 +39,10 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 12F);
-            button1.Location = new Point(425, 384);
+            button1.Location = new Point(412, 400);
             button1.Margin = new Padding(4, 6, 4, 6);
             button1.Name = "button1";
-            button1.Size = new Size(143, 55);
+            button1.Size = new Size(155, 32);
             button1.TabIndex = 0;
             button1.Text = "Entrar";
             button1.UseVisualStyleBackColor = true;
@@ -51,7 +51,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(330, 294);
+            textBox1.Location = new Point(386, 297);
             textBox1.Margin = new Padding(4, 6, 4, 6);
             textBox1.Name = "textBox1";
             textBox1.PasswordChar = '*';
@@ -63,7 +63,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(90, 297);
+            label1.Location = new Point(146, 300);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(197, 21);
@@ -75,9 +75,9 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Image = Properties.Resources.TaskManagerLogo;
-            pictureBox1.Location = new Point(330, 12);
+            pictureBox1.Location = new Point(305, 22);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(333, 188);
+            pictureBox1.Size = new Size(378, 211);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;

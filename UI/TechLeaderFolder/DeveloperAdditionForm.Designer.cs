@@ -44,7 +44,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(33, 32);
+            lblTitle.Location = new Point(24, 18);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(293, 25);
             lblTitle.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI", 12F);
-            lblNome.Location = new Point(202, 207);
+            lblNome.Location = new Point(114, 214);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(157, 21);
             lblNome.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             lblEmail.AutoSize = true;
             lblEmail.Font = new Font("Segoe UI", 12F);
-            lblEmail.Location = new Point(202, 253);
+            lblEmail.Location = new Point(114, 291);
             lblEmail.Name = "lblEmail";
             lblEmail.Size = new Size(55, 21);
             lblEmail.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             lblArea.AutoSize = true;
             lblArea.Font = new Font("Segoe UI", 12F);
-            lblArea.Location = new Point(202, 313);
+            lblArea.Location = new Point(114, 391);
             lblArea.Name = "lblArea";
             lblArea.Size = new Size(49, 21);
             lblArea.TabIndex = 3;
@@ -83,25 +83,25 @@
             // txtboxNome
             // 
             txtboxNome.Font = new Font("Segoe UI", 12F);
-            txtboxNome.Location = new Point(432, 205);
+            txtboxNome.Location = new Point(368, 211);
             txtboxNome.Name = "txtboxNome";
-            txtboxNome.Size = new Size(271, 29);
+            txtboxNome.Size = new Size(441, 29);
             txtboxNome.TabIndex = 4;
             // 
             // txtboxEmail
             // 
             txtboxEmail.Font = new Font("Segoe UI", 12F);
-            txtboxEmail.Location = new Point(432, 255);
+            txtboxEmail.Location = new Point(368, 288);
             txtboxEmail.Name = "txtboxEmail";
-            txtboxEmail.Size = new Size(271, 29);
+            txtboxEmail.Size = new Size(441, 29);
             txtboxEmail.TabIndex = 5;
             // 
             // btnAdicionar
             // 
             btnAdicionar.Font = new Font("Segoe UI", 12F);
-            btnAdicionar.Location = new Point(745, 513);
+            btnAdicionar.Location = new Point(663, 513);
             btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(110, 28);
+            btnAdicionar.Size = new Size(146, 34);
             btnAdicionar.TabIndex = 6;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
@@ -110,9 +110,9 @@
             // btnCancelar
             // 
             btnCancelar.Font = new Font("Segoe UI", 12F);
-            btnCancelar.Location = new Point(900, 513);
+            btnCancelar.Location = new Point(851, 513);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(110, 28);
+            btnCancelar.Size = new Size(146, 34);
             btnCancelar.TabIndex = 7;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -122,9 +122,9 @@
             // 
             cbboxArea.Font = new Font("Segoe UI", 12F);
             cbboxArea.FormattingEnabled = true;
-            cbboxArea.Location = new Point(432, 311);
+            cbboxArea.Location = new Point(368, 388);
             cbboxArea.Name = "cbboxArea";
-            cbboxArea.Size = new Size(231, 29);
+            cbboxArea.Size = new Size(328, 29);
             cbboxArea.TabIndex = 8;
             // 
             // DeveloperAdditionForm

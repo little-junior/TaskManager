@@ -127,7 +127,7 @@
             cbboxStatus.Font = new Font("Segoe UI", 10F);
             cbboxStatus.FormattingEnabled = true;
             cbboxStatus.Location = new Point(169, 20);
-            cbboxStatus.Margin = new Padding(2, 2, 2, 2);
+            cbboxStatus.Margin = new Padding(2);
             cbboxStatus.Name = "cbboxStatus";
             cbboxStatus.Size = new Size(162, 25);
             cbboxStatus.TabIndex = 7;
@@ -148,7 +148,7 @@
             // 
             btnEditar.Font = new Font("Segoe UI", 11F);
             btnEditar.Location = new Point(709, 320);
-            btnEditar.Margin = new Padding(2, 2, 2, 2);
+            btnEditar.Margin = new Padding(2);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(83, 24);
             btnEditar.TabIndex = 9;
@@ -162,7 +162,7 @@
             btnMarcarImpedimento.AutoSize = true;
             btnMarcarImpedimento.Font = new Font("Segoe UI", 11F);
             btnMarcarImpedimento.Location = new Point(466, 378);
-            btnMarcarImpedimento.Margin = new Padding(2, 2, 2, 2);
+            btnMarcarImpedimento.Margin = new Padding(2);
             btnMarcarImpedimento.Name = "btnMarcarImpedimento";
             btnMarcarImpedimento.Size = new Size(144, 30);
             btnMarcarImpedimento.TabIndex = 10;
@@ -175,7 +175,7 @@
             // 
             lblMarcarComo.AutoSize = true;
             lblMarcarComo.Font = new Font("Segoe UI", 11F);
-            lblMarcarComo.Location = new Point(354, 378);
+            lblMarcarComo.Location = new Point(354, 383);
             lblMarcarComo.Margin = new Padding(2, 0, 2, 0);
             lblMarcarComo.Name = "lblMarcarComo";
             lblMarcarComo.Size = new Size(104, 20);
@@ -188,7 +188,7 @@
             btnMarcarAbandonada.AutoSize = true;
             btnMarcarAbandonada.Font = new Font("Segoe UI", 11F);
             btnMarcarAbandonada.Location = new Point(631, 378);
-            btnMarcarAbandonada.Margin = new Padding(2, 2, 2, 2);
+            btnMarcarAbandonada.Margin = new Padding(2);
             btnMarcarAbandonada.Name = "btnMarcarAbandonada";
             btnMarcarAbandonada.Size = new Size(120, 30);
             btnMarcarAbandonada.TabIndex = 12;
@@ -202,7 +202,7 @@
             btnMarcarConcluida.AutoSize = true;
             btnMarcarConcluida.Font = new Font("Segoe UI", 11F);
             btnMarcarConcluida.Location = new Point(466, 410);
-            btnMarcarConcluida.Margin = new Padding(2, 2, 2, 2);
+            btnMarcarConcluida.Margin = new Padding(2);
             btnMarcarConcluida.Name = "btnMarcarConcluida";
             btnMarcarConcluida.Size = new Size(145, 30);
             btnMarcarConcluida.TabIndex = 13;
@@ -216,7 +216,7 @@
             btnMarcarAtrasada.AutoSize = true;
             btnMarcarAtrasada.Font = new Font("Segoe UI", 11F);
             btnMarcarAtrasada.Location = new Point(631, 410);
-            btnMarcarAtrasada.Margin = new Padding(2, 2, 2, 2);
+            btnMarcarAtrasada.Margin = new Padding(2);
             btnMarcarAtrasada.Name = "btnMarcarAtrasada";
             btnMarcarAtrasada.Size = new Size(120, 30);
             btnMarcarAtrasada.TabIndex = 14;

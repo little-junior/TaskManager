@@ -43,7 +43,7 @@
             // cbboxArea
             // 
             cbboxArea.FormattingEnabled = true;
-            cbboxArea.Location = new Point(443, 388);
+            cbboxArea.Location = new Point(368, 388);
             cbboxArea.Margin = new Padding(5, 6, 5, 6);
             cbboxArea.Name = "cbboxArea";
             cbboxArea.Size = new Size(328, 29);
@@ -51,10 +51,10 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(851, 501);
+            btnCancelar.Location = new Point(851, 513);
             btnCancelar.Margin = new Padding(5, 6, 5, 6);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(157, 46);
+            btnCancelar.Size = new Size(146, 34);
             btnCancelar.TabIndex = 16;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -62,10 +62,10 @@
             // 
             // btnAdicionar
             // 
-            btnAdicionar.Location = new Point(663, 501);
+            btnAdicionar.Location = new Point(663, 513);
             btnAdicionar.Margin = new Padding(5, 6, 5, 6);
             btnAdicionar.Name = "btnAdicionar";
-            btnAdicionar.Size = new Size(157, 46);
+            btnAdicionar.Size = new Size(146, 34);
             btnAdicionar.TabIndex = 15;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
@@ -73,7 +73,7 @@
             // 
             // txtboxEmail
             // 
-            txtboxEmail.Location = new Point(443, 294);
+            txtboxEmail.Location = new Point(368, 288);
             txtboxEmail.Margin = new Padding(5, 6, 5, 6);
             txtboxEmail.Name = "txtboxEmail";
             txtboxEmail.Size = new Size(441, 29);
@@ -81,7 +81,7 @@
             // 
             // txtboxNome
             // 
-            txtboxNome.Location = new Point(443, 211);
+            txtboxNome.Location = new Point(368, 211);
             txtboxNome.Margin = new Padding(5, 6, 5, 6);
             txtboxNome.Name = "txtboxNome";
             txtboxNome.Size = new Size(441, 29);
@@ -124,7 +124,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(47, 54);
+            lblTitle.Location = new Point(24, 18);
             lblTitle.Margin = new Padding(5, 0, 5, 0);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(262, 25);

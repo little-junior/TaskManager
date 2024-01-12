@@ -49,9 +49,9 @@
             // 
             btnCancelar.AutoSize = true;
             btnCancelar.Font = new Font("Segoe UI", 12F);
-            btnCancelar.Location = new Point(733, 385);
+            btnCancelar.Location = new Point(709, 378);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(86, 31);
+            btnCancelar.Size = new Size(114, 31);
             btnCancelar.TabIndex = 27;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@
             // 
             btnSalvar.AutoSize = true;
             btnSalvar.Font = new Font("Segoe UI", 12F);
-            btnSalvar.Location = new Point(620, 385);
+            btnSalvar.Location = new Point(576, 378);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(80, 31);
+            btnSalvar.Size = new Size(108, 31);
             btnSalvar.TabIndex = 26;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
@@ -170,7 +170,7 @@
             cbboxStatus.Font = new Font("Segoe UI", 12F);
             cbboxStatus.FormattingEnabled = true;
             cbboxStatus.Location = new Point(185, 322);
-            cbboxStatus.Margin = new Padding(2, 2, 2, 2);
+            cbboxStatus.Margin = new Padding(2);
             cbboxStatus.Name = "cbboxStatus";
             cbboxStatus.Size = new Size(215, 29);
             cbboxStatus.TabIndex = 29;
@@ -195,7 +195,7 @@
             Controls.Add(txtboxNome);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "TaskEditForm";
             StartPosition = FormStartPosition.CenterScreen;
