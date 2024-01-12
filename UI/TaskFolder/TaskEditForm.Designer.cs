@@ -49,10 +49,9 @@
             // 
             btnCancelar.AutoSize = true;
             btnCancelar.Font = new Font("Segoe UI", 12F);
-            btnCancelar.Location = new Point(1047, 642);
-            btnCancelar.Margin = new Padding(4, 5, 4, 5);
+            btnCancelar.Location = new Point(733, 385);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(123, 46);
+            btnCancelar.Size = new Size(86, 31);
             btnCancelar.TabIndex = 27;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
@@ -62,10 +61,9 @@
             // 
             btnSalvar.AutoSize = true;
             btnSalvar.Font = new Font("Segoe UI", 12F);
-            btnSalvar.Location = new Point(886, 642);
-            btnSalvar.Margin = new Padding(4, 5, 4, 5);
+            btnSalvar.Location = new Point(620, 385);
             btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(115, 46);
+            btnSalvar.Size = new Size(80, 31);
             btnSalvar.TabIndex = 26;
             btnSalvar.Text = "Salvar";
             btnSalvar.UseVisualStyleBackColor = true;
@@ -75,40 +73,36 @@
             // 
             lblTempo.AutoSize = true;
             lblTempo.Font = new Font("Segoe UI", 12F);
-            lblTempo.Location = new Point(54, 459);
-            lblTempo.Margin = new Padding(4, 0, 4, 0);
+            lblTempo.Location = new Point(38, 275);
             lblTempo.Name = "lblTempo";
-            lblTempo.Size = new Size(155, 32);
+            lblTempo.Size = new Size(101, 21);
             lblTempo.TabIndex = 25;
             lblTempo.Text = "Tempo (dias):";
             // 
             // numericTempo
             // 
             numericTempo.Font = new Font("Segoe UI", 12F);
-            numericTempo.Location = new Point(264, 459);
-            numericTempo.Margin = new Padding(4, 5, 4, 5);
+            numericTempo.Location = new Point(185, 275);
             numericTempo.Name = "numericTempo";
-            numericTempo.Size = new Size(171, 39);
+            numericTempo.Size = new Size(120, 29);
             numericTempo.TabIndex = 24;
             // 
             // cbboxResponsavel
             // 
             cbboxResponsavel.Font = new Font("Segoe UI", 12F);
             cbboxResponsavel.FormattingEnabled = true;
-            cbboxResponsavel.Location = new Point(264, 358);
-            cbboxResponsavel.Margin = new Padding(4, 5, 4, 5);
+            cbboxResponsavel.Location = new Point(185, 215);
             cbboxResponsavel.Name = "cbboxResponsavel";
-            cbboxResponsavel.Size = new Size(423, 40);
+            cbboxResponsavel.Size = new Size(297, 29);
             cbboxResponsavel.TabIndex = 23;
             // 
             // lblResponsavel
             // 
             lblResponsavel.AutoSize = true;
             lblResponsavel.Font = new Font("Segoe UI", 12F);
-            lblResponsavel.Location = new Point(54, 358);
-            lblResponsavel.Margin = new Padding(4, 0, 4, 0);
+            lblResponsavel.Location = new Point(38, 215);
             lblResponsavel.Name = "lblResponsavel";
-            lblResponsavel.Size = new Size(157, 32);
+            lblResponsavel.Size = new Size(104, 21);
             lblResponsavel.TabIndex = 21;
             lblResponsavel.Text = "Responsável: ";
             // 
@@ -116,10 +110,9 @@
             // 
             lblDescricao.AutoSize = true;
             lblDescricao.Font = new Font("Segoe UI", 12F);
-            lblDescricao.Location = new Point(54, 209);
-            lblDescricao.Margin = new Padding(4, 0, 4, 0);
+            lblDescricao.Location = new Point(38, 125);
             lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(121, 32);
+            lblDescricao.Size = new Size(80, 21);
             lblDescricao.TabIndex = 20;
             lblDescricao.Text = "Descrição:";
             // 
@@ -127,10 +120,9 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI", 12F);
-            lblNome.Location = new Point(54, 144);
-            lblNome.Margin = new Padding(4, 0, 4, 0);
+            lblNome.Location = new Point(38, 86);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(92, 32);
+            lblNome.Size = new Size(60, 21);
             lblNome.TabIndex = 18;
             lblNome.Text = "Nome: ";
             // 
@@ -138,39 +130,37 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Verdana", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(13, 9);
-            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Location = new Point(9, 5);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(234, 36);
+            lblTitle.Size = new Size(157, 25);
             lblTitle.TabIndex = 17;
             lblTitle.Text = "Editar Tarefa";
             // 
             // txtboxDescricao
             // 
             txtboxDescricao.Font = new Font("Segoe UI", 12F);
-            txtboxDescricao.Location = new Point(264, 209);
-            txtboxDescricao.Margin = new Padding(4, 5, 4, 5);
+            txtboxDescricao.Location = new Point(185, 125);
             txtboxDescricao.Multiline = true;
             txtboxDescricao.Name = "txtboxDescricao";
-            txtboxDescricao.Size = new Size(497, 111);
+            txtboxDescricao.Size = new Size(349, 68);
             txtboxDescricao.TabIndex = 16;
             // 
             // txtboxNome
             // 
             txtboxNome.Font = new Font("Segoe UI", 12F);
-            txtboxNome.Location = new Point(264, 139);
-            txtboxNome.Margin = new Padding(4, 5, 4, 5);
+            txtboxNome.Location = new Point(185, 83);
             txtboxNome.Name = "txtboxNome";
-            txtboxNome.Size = new Size(497, 39);
+            txtboxNome.Size = new Size(349, 29);
             txtboxNome.TabIndex = 15;
             // 
             // lblStatus
             // 
             lblStatus.AutoSize = true;
             lblStatus.Font = new Font("Segoe UI", 12F);
-            lblStatus.Location = new Point(54, 541);
+            lblStatus.Location = new Point(38, 325);
+            lblStatus.Margin = new Padding(2, 0, 2, 0);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(83, 32);
+            lblStatus.Size = new Size(55, 21);
             lblStatus.TabIndex = 28;
             lblStatus.Text = "Status:";
             lblStatus.TextAlign = ContentAlignment.TopCenter;
@@ -179,16 +169,17 @@
             // 
             cbboxStatus.Font = new Font("Segoe UI", 12F);
             cbboxStatus.FormattingEnabled = true;
-            cbboxStatus.Location = new Point(257, 538);
+            cbboxStatus.Location = new Point(185, 322);
+            cbboxStatus.Margin = new Padding(2, 2, 2, 2);
             cbboxStatus.Name = "cbboxStatus";
-            cbboxStatus.Size = new Size(305, 40);
+            cbboxStatus.Size = new Size(215, 29);
             cbboxStatus.TabIndex = 29;
             // 
             // TaskEditForm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1209, 702);
+            ClientSize = new Size(846, 421);
             Controls.Add(cbboxStatus);
             Controls.Add(lblStatus);
             Controls.Add(btnCancelar);
@@ -204,6 +195,7 @@
             Controls.Add(txtboxNome);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2, 2, 2, 2);
             MaximizeBox = false;
             Name = "TaskEditForm";
             StartPosition = FormStartPosition.CenterScreen;
