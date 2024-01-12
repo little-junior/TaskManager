@@ -39,7 +39,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 12F);
-            button1.Location = new Point(539, 730);
+            button1.Location = new Point(425, 384);
             button1.Margin = new Padding(4, 6, 4, 6);
             button1.Name = "button1";
             button1.Size = new Size(143, 55);
@@ -51,11 +51,11 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(575, 597);
+            textBox1.Location = new Point(330, 294);
             textBox1.Margin = new Padding(4, 6, 4, 6);
             textBox1.Name = "textBox1";
             textBox1.PasswordChar = '*';
-            textBox1.Size = new Size(410, 39);
+            textBox1.Size = new Size(410, 29);
             textBox1.TabIndex = 1;
             textBox1.UseSystemPasswordChar = true;
             // 
@@ -63,10 +63,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(187, 600);
+            label1.Location = new Point(90, 297);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(306, 32);
+            label1.Size = new Size(197, 21);
             label1.TabIndex = 2;
             label1.Text = "Digite sua chave de acesso:";
             // 
@@ -75,19 +75,19 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Image = Properties.Resources.TaskManagerLogo;
-            pictureBox1.Location = new Point(248, 0);
+            pictureBox1.Location = new Point(330, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(770, 573);
+            pictureBox1.Size = new Size(333, 188);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(1257, 840);
+            ClientSize = new Size(979, 491);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(textBox1);
