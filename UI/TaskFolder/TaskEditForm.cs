@@ -53,7 +53,7 @@ namespace UI.TaskFolder
 
             foreach (Status status in Enum.GetValues(typeof(Status)))
             {
-                if (status == Status.ASerAprovada || status == Status.EmAnalise || status == Status.Concluida)
+                if (status == Status.ASerAprovada || status == Status.EmAnalise)
                     continue;
                 cbboxStatus.Items.Add(status.ToString());
             }
