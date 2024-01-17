@@ -33,13 +33,14 @@ O seguinte projeto aborda a construção de um Gerenciador de Tarefas utilizando
 1. Usuários e Responsáveis:
     - Criação de desenvolvedores e tech leaders por área.
     - Cada usuário possui uma chave de acesso única.
-    - Os tech leaders têm a capacidade de criar novos desenvolvedores.
+    - Os tech leaders têm a capacidade de criar novos desenvolvedores e relacionar tarefas.
 
 2. Tarefas:
     - Criação de tarefas associadas a um desenvolvedor ou tech leader responsável.
     - Mudança de status das tarefas (por exemplo, "Em Progresso", "Concluída", etc.).
     - Aprovação de tarefas por tech leaders.
-    - Listagem de tarefas para seus respectivos desenvolvedores responsáveis, enquanto tech leaders possuem acesso a todas as tarefas.
+    - Listagem de tarefas e suas relacionadas para seus respectivos desenvolvedores responsáveis, enquanto tech leaders possuem acesso a todas as tarefas.
+    - Cada tarefa pode possuir uma Relação, que junta tarefas em contextos relacionados
     - Edição das tarefas.
 
 ## 📖 Tópicos abordados
