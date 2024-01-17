@@ -165,7 +165,9 @@
             Controls.Add(lblDescricao);
             Controls.Add(lblNome);
             Controls.Add(lboxTasks);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "TaskRelationForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ver Relacionadas";

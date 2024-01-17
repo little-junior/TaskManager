@@ -96,6 +96,7 @@ namespace UI.TechLeaderFolder
             lblAprovada.Visible = true;
             lblStatus.Visible = true;
             lblRelacao.Visible = true;
+            btnVerRelac.Visible = true;
         }
 
         private void EsconderControles()
@@ -107,6 +108,7 @@ namespace UI.TechLeaderFolder
             lblAprovada.Visible = false;
             lblStatus.Visible = false;
             lblRelacao.Visible = false;
+            btnVerRelac.Visible = false;
         }
 
         private void lboxTasks_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -291,7 +293,7 @@ namespace UI.TechLeaderFolder
         {
             if (_taskAtual.Relation == null)
             {
-                MessageBox.Show("A tarefa selecionada não possui relação.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("A tarefa selecionada não possui relação.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -303,7 +305,7 @@ namespace UI.TechLeaderFolder
 
         private void TaskRelationForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Thread.Sleep(500);
+            Thread.Sleep(200);
             this.Show();
         }
     }

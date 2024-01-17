@@ -145,7 +145,7 @@
             cbboxResponsavel.FormattingEnabled = true;
             cbboxResponsavel.Location = new Point(172, 216);
             cbboxResponsavel.Name = "cbboxResponsavel";
-            cbboxResponsavel.Size = new Size(297, 29);
+            cbboxResponsavel.Size = new Size(331, 29);
             cbboxResponsavel.TabIndex = 9;
             // 
             // numericTempo

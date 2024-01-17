@@ -116,6 +116,7 @@ namespace UI.DeveloperFolder
             lblAprovada.Visible = true;
             lblStatus.Visible = true;
             lblRelacao.Visible = true;
+            btnVerRelac.Visible = true;
         }
 
         private void EsconderControles()
@@ -127,6 +128,8 @@ namespace UI.DeveloperFolder
             lblAprovada.Visible = false;
             lblStatus.Visible = false;
             lblRelacao.Visible = false;
+            btnVerRelac.Visible = false;
+
         }
         private void cbboxStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -279,7 +282,7 @@ namespace UI.DeveloperFolder
         {
             if (_taskAtual.Relation == null)
             {
-                MessageBox.Show("A tarefa selecionada não possui relação.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("A tarefa selecionada não possui relação.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -291,7 +294,7 @@ namespace UI.DeveloperFolder
 
         private void TaskRelationForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Thread.Sleep(500);
+            Thread.Sleep(200);
             this.Show();
         }
 
