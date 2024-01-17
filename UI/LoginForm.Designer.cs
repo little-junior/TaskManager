@@ -62,11 +62,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(146, 300);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(197, 21);
+            label1.Size = new Size(217, 21);
             label1.TabIndex = 2;
             label1.Text = "Digite sua chave de acesso:";
             // 
