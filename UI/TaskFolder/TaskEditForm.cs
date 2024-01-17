@@ -35,6 +35,7 @@ namespace UI.TaskFolder
             txtboxDescricao.Text = task.Description;
             numericTempo.Value = task.TaskDaySpan;
             cbboxStatus.SelectedItem = task.Status.ToString();
+            txtboxRelacao.Text = task.Relation;
         }
 
         private void PreencherComboBoxResponsaveis(ArrayList users)
@@ -75,6 +76,8 @@ namespace UI.TaskFolder
             numericTempo.Enabled = false;
             lblStatus.Enabled = false;
             cbboxStatus.Enabled = false;
+            lblRelacao.Enabled = false;
+            txtboxRelacao.Enabled = false;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -85,6 +88,7 @@ namespace UI.TaskFolder
             var responsavelAtualizado = (User)cbboxResponsavel.SelectedItem;
             var duracaoAtualizada = (int)numericTempo.Value;
             var statusAtualizado = Enum.Parse<Status>(cbboxStatus.SelectedItem.ToString());
+            var relacaoAtualizada = string.IsNullOrWhiteSpace(txtboxRelacao.Text) ? null : txtboxRelacao.Text;
 
             if (TextBoxesIsNullOrWhiteSpace(nomeAtualizado, descricaoAtualizada))
             {
@@ -97,6 +101,7 @@ namespace UI.TaskFolder
             tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateStatus(statusAtualizado);
             tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateResponsible(responsavelAtualizado);
             tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateDaySpan(duracaoAtualizada);
+            tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateRelation(relacaoAtualizada);
 
             try
             {

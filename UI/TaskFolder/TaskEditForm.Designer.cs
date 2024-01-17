@@ -42,6 +42,8 @@
             txtboxNome = new TextBox();
             lblStatus = new Label();
             cbboxStatus = new ComboBox();
+            lblRelacao = new Label();
+            txtboxRelacao = new TextBox();
             ((System.ComponentModel.ISupportInitialize)numericTempo).BeginInit();
             SuspendLayout();
             // 
@@ -49,7 +51,7 @@
             // 
             btnCancelar.AutoSize = true;
             btnCancelar.Font = new Font("Segoe UI", 12F);
-            btnCancelar.Location = new Point(709, 378);
+            btnCancelar.Location = new Point(755, 427);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(114, 31);
             btnCancelar.TabIndex = 27;
@@ -61,7 +63,7 @@
             // 
             btnSalvar.AutoSize = true;
             btnSalvar.Font = new Font("Segoe UI", 12F);
-            btnSalvar.Location = new Point(576, 378);
+            btnSalvar.Location = new Point(627, 427);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(108, 31);
             btnSalvar.TabIndex = 26;
@@ -72,10 +74,10 @@
             // lblTempo
             // 
             lblTempo.AutoSize = true;
-            lblTempo.Font = new Font("Segoe UI", 12F);
+            lblTempo.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblTempo.Location = new Point(38, 275);
             lblTempo.Name = "lblTempo";
-            lblTempo.Size = new Size(101, 21);
+            lblTempo.Size = new Size(107, 21);
             lblTempo.TabIndex = 25;
             lblTempo.Text = "Tempo (dias):";
             // 
@@ -99,30 +101,30 @@
             // lblResponsavel
             // 
             lblResponsavel.AutoSize = true;
-            lblResponsavel.Font = new Font("Segoe UI", 12F);
+            lblResponsavel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblResponsavel.Location = new Point(38, 215);
             lblResponsavel.Name = "lblResponsavel";
-            lblResponsavel.Size = new Size(104, 21);
+            lblResponsavel.Size = new Size(109, 21);
             lblResponsavel.TabIndex = 21;
             lblResponsavel.Text = "Responsável: ";
             // 
             // lblDescricao
             // 
             lblDescricao.AutoSize = true;
-            lblDescricao.Font = new Font("Segoe UI", 12F);
+            lblDescricao.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblDescricao.Location = new Point(38, 125);
             lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(80, 21);
+            lblDescricao.Size = new Size(85, 21);
             lblDescricao.TabIndex = 20;
             lblDescricao.Text = "Descrição:";
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Font = new Font("Segoe UI", 12F);
+            lblNome.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblNome.Location = new Point(38, 86);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(60, 21);
+            lblNome.Size = new Size(63, 21);
             lblNome.TabIndex = 18;
             lblNome.Text = "Nome: ";
             // 
@@ -156,11 +158,11 @@
             // lblStatus
             // 
             lblStatus.AutoSize = true;
-            lblStatus.Font = new Font("Segoe UI", 12F);
+            lblStatus.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblStatus.Location = new Point(38, 325);
             lblStatus.Margin = new Padding(2, 0, 2, 0);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(55, 21);
+            lblStatus.Size = new Size(59, 21);
             lblStatus.TabIndex = 28;
             lblStatus.Text = "Status:";
             lblStatus.TextAlign = ContentAlignment.TopCenter;
@@ -175,11 +177,33 @@
             cbboxStatus.Size = new Size(215, 29);
             cbboxStatus.TabIndex = 29;
             // 
+            // lblRelacao
+            // 
+            lblRelacao.AutoSize = true;
+            lblRelacao.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            lblRelacao.Location = new Point(38, 379);
+            lblRelacao.Margin = new Padding(2, 0, 2, 0);
+            lblRelacao.Name = "lblRelacao";
+            lblRelacao.Size = new Size(71, 21);
+            lblRelacao.TabIndex = 30;
+            lblRelacao.Text = "Relação:";
+            lblRelacao.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // txtboxRelacao
+            // 
+            txtboxRelacao.Font = new Font("Segoe UI", 12F);
+            txtboxRelacao.Location = new Point(185, 376);
+            txtboxRelacao.Name = "txtboxRelacao";
+            txtboxRelacao.Size = new Size(297, 29);
+            txtboxRelacao.TabIndex = 31;
+            // 
             // TaskEditForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(846, 421);
+            ClientSize = new Size(891, 470);
+            Controls.Add(txtboxRelacao);
+            Controls.Add(lblRelacao);
             Controls.Add(cbboxStatus);
             Controls.Add(lblStatus);
             Controls.Add(btnCancelar);
@@ -220,5 +244,7 @@
         private TextBox txtboxNome;
         private Label lblStatus;
         private ComboBox cbboxStatus;
+        private Label lblRelacao;
+        private TextBox txtboxRelacao;
     }
 }
