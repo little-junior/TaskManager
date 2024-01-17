@@ -90,33 +90,33 @@
             // lblArea
             // 
             lblArea.AutoSize = true;
-            lblArea.Font = new Font("Segoe UI", 12F);
+            lblArea.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblArea.Location = new Point(114, 391);
             lblArea.Margin = new Padding(5, 0, 5, 0);
             lblArea.Name = "lblArea";
-            lblArea.Size = new Size(49, 21);
+            lblArea.Size = new Size(52, 21);
             lblArea.TabIndex = 12;
             lblArea.Text = "Área: ";
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Font = new Font("Segoe UI", 12F);
+            lblEmail.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblEmail.Location = new Point(114, 291);
             lblEmail.Margin = new Padding(5, 0, 5, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(55, 21);
+            lblEmail.Size = new Size(56, 21);
             lblEmail.TabIndex = 11;
             lblEmail.Text = "Email: ";
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Font = new Font("Segoe UI", 12F);
+            lblNome.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblNome.Location = new Point(114, 214);
             lblNome.Margin = new Padding(5, 0, 5, 0);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(157, 21);
+            lblNome.Size = new Size(166, 21);
             lblNome.TabIndex = 10;
             lblNome.Text = "Nome e Sobrenome: ";
             // 

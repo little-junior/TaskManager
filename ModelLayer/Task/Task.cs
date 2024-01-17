@@ -11,7 +11,7 @@ namespace ModelLayer.Task
 {
     public class Task
     {
-        public Task(string name, string description, User? responsible = null, bool approved = false, int taskDaySpan = 0, Status status = Status.ASerAprovada)
+        public Task(string name, string description, User? responsible = null, bool approved = false, int taskDaySpan = 0, Status status = Status.ASerAprovada, string? relation = null)
         {
             Id = Guid.NewGuid().ToString();
             Name = name;
@@ -20,10 +20,11 @@ namespace ModelLayer.Task
             Approved = approved;
             TaskDaySpan = taskDaySpan;
             Status = status;
+            Relation = relation;
         }
 
         [JsonConstructor]
-        public Task(string id, string name, string description, User responsible, bool approved, int taskDaySpan, Status status)
+        public Task(string id, string name, string description, User responsible, bool approved, int taskDaySpan, Status status, string relation)
         {
             Id = id;
             Name = name;
@@ -32,6 +33,7 @@ namespace ModelLayer.Task
             Approved = approved;
             TaskDaySpan = taskDaySpan;
             Status = status;
+            Relation = relation;
         }
 
         public string Id { get; }
@@ -41,6 +43,7 @@ namespace ModelLayer.Task
         public bool Approved { get; private set; }
         public int TaskDaySpan { get; private set; }
         public Status Status { get; private set; }
+        public string? Relation { get; private set; }
 
         public void UpdateStatus(Status status)
         {
@@ -71,6 +74,11 @@ namespace ModelLayer.Task
         public void UpdateDaySpan(int taskDaySpan)
         {
             TaskDaySpan = taskDaySpan;
+        }
+
+        public void UpdateRelation(string relation)
+        {
+            Relation = relation;
         }
     }
 }

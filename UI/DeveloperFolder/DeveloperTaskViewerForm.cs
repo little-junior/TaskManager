@@ -35,6 +35,8 @@ namespace UI.DeveloperFolder
         private readonly string _devId;
         private RealTask.Task _taskAtual;
         private string _statusSelecionado;
+        private TaskRelationForm _taskRelationForm;
+
 
         private void PopulateComboBox()
         {
@@ -79,12 +81,14 @@ namespace UI.DeveloperFolder
                     EsconderOpcoes();
                 }
             }
-            
+
         }
 
         private void ExibirDetalhesTarefa(RealTask.Task tarefa)
         {
-            if (tarefa != null)
+            var teste = lboxTasks.Items.Count;
+
+            if (tarefa != null && teste != 0)
             {
                 lblNome.Text = $"Nome: {tarefa.Name}";
                 lblDescricao.Text = $"Descrição: {tarefa.Description}";
@@ -92,6 +96,7 @@ namespace UI.DeveloperFolder
                 lblDuracao.Text = $"Duração (dias): {tarefa.TaskDaySpan}";
                 lblAprovada.Text = $"Aprovada? -> {tarefa.Approved}";
                 lblStatus.Text = $"Status: {tarefa.Status}";
+                lblRelacao.Text = $"Relação: {tarefa.Relation}";
 
                 ExibirControles();
             }
@@ -110,6 +115,7 @@ namespace UI.DeveloperFolder
             lblDuracao.Visible = true;
             lblAprovada.Visible = true;
             lblStatus.Visible = true;
+            lblRelacao.Visible = true;
         }
 
         private void EsconderControles()
@@ -120,6 +126,7 @@ namespace UI.DeveloperFolder
             lblDuracao.Visible = false;
             lblAprovada.Visible = false;
             lblStatus.Visible = false;
+            lblRelacao.Visible = false;
         }
         private void cbboxStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -168,7 +175,7 @@ namespace UI.DeveloperFolder
                 return false;
             if (_taskAtual.Status == Status.Concluida)
                 return false;
-            if(_taskAtual.Status == Status.Abandonada)
+            if (_taskAtual.Status == Status.Abandonada)
                 return false;
             return true;
 
@@ -178,14 +185,14 @@ namespace UI.DeveloperFolder
         private void btnMarcarImpedimento_Click(object sender, EventArgs e)
         {
             var tarefasLista = _taskService.GetTasks();
-            tarefasLista.First(t => t.Id ==  _taskAtual.Id).UpdateStatus(Status.ComImpedimento);
+            tarefasLista.First(t => t.Id == _taskAtual.Id).UpdateStatus(Status.ComImpedimento);
 
             try
             {
                 _taskService.UpdateTask(tarefasLista);
                 MessageBox.Show("Tarefa marcada como Com Impedimento", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AtualizarListBox();
-                AtualizarExibicao();
+
 
             }
             catch (Exception ex)
@@ -204,7 +211,7 @@ namespace UI.DeveloperFolder
                 _taskService.UpdateTask(tarefasLista);
                 MessageBox.Show("Tarefa marcada como Abandonada", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AtualizarListBox();
-                AtualizarExibicao();
+
 
             }
             catch (Exception ex)
@@ -223,7 +230,7 @@ namespace UI.DeveloperFolder
                 _taskService.UpdateTask(tarefasLista);
                 MessageBox.Show("Tarefa mandada para análise", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AtualizarListBox();
-                AtualizarExibicao();
+
 
             }
             catch (Exception ex)
@@ -242,7 +249,7 @@ namespace UI.DeveloperFolder
                 _taskService.UpdateTask(tarefasLista);
                 MessageBox.Show("Tarefa marcada como Atrasada", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 AtualizarListBox();
-                AtualizarExibicao();
+
             }
             catch (Exception ex)
             {
@@ -264,6 +271,30 @@ namespace UI.DeveloperFolder
                 PopulateListBox(_devId);
             else
                 PopulateListBox(_devId, _statusSelecionado);
+
+            AtualizarExibicao();
         }
+
+        private void btnVerRelac_Click(object sender, EventArgs e)
+        {
+            if (_taskAtual.Relation == null)
+            {
+                MessageBox.Show("A tarefa selecionada não possui relação.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            _taskRelationForm = new TaskRelationForm(_taskAtual.Relation);
+            this.Hide();
+            _taskRelationForm.FormClosed += TaskRelationForm_FormClosed;
+            _taskRelationForm.ShowDialog();
+        }
+
+        private void TaskRelationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Thread.Sleep(500);
+            this.Show();
+        }
+
+        
     }
 }

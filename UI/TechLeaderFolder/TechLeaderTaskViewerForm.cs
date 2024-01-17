@@ -29,6 +29,7 @@ namespace UI.TechLeaderFolder
         private readonly TaskService _taskService;
         private RealTask.Task _taskAtual;
         private string _statusSelecionado;
+        private TaskRelationForm _taskRelationForm;
 
         private void PopulateComboBox()
         {
@@ -54,6 +55,7 @@ namespace UI.TechLeaderFolder
         {
             var tasksList = _taskService.GetTasks().FindAll(t => t.Status.ToString() == option);
 
+
             lboxTasks.DataSource = tasksList;
             lboxTasks.DisplayMember = "Name";
         }
@@ -62,7 +64,9 @@ namespace UI.TechLeaderFolder
 
         private void ExibirDetalhesTarefa(RealTask.Task tarefa)
         {
-            if (tarefa != null)
+            var teste = lboxTasks.Items.Count;
+
+            if (tarefa != null && teste != 0)
             {
                 lblNome.Text = $"Nome: {tarefa.Name}";
                 lblDescricao.Text = $"Descrição: {tarefa.Description}";
@@ -70,6 +74,7 @@ namespace UI.TechLeaderFolder
                 lblDuracao.Text = $"Duração (dias): {tarefa.TaskDaySpan}";
                 lblAprovada.Text = $"Aprovada? -> {tarefa.Approved}";
                 lblStatus.Text = $"Status: {tarefa.Status}";
+                lblRelacao.Text = $"Relação: {tarefa.Relation}";
 
                 ExibirControles();
             }
@@ -90,6 +95,7 @@ namespace UI.TechLeaderFolder
             lblDuracao.Visible = true;
             lblAprovada.Visible = true;
             lblStatus.Visible = true;
+            lblRelacao.Visible = true;
         }
 
         private void EsconderControles()
@@ -100,6 +106,7 @@ namespace UI.TechLeaderFolder
             lblDuracao.Visible = false;
             lblAprovada.Visible = false;
             lblStatus.Visible = false;
+            lblRelacao.Visible = false;
         }
 
         private void lboxTasks_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -127,6 +134,8 @@ namespace UI.TechLeaderFolder
                 PopulateListBox();
             else
                 PopulateListBox(_statusSelecionado);
+
+            AtualizarExibicao();
         }
 
         private void AtualizarExibicao()
@@ -145,8 +154,8 @@ namespace UI.TechLeaderFolder
             AtualizarExibicao();
         }
 
-       
-        
+
+
         private void VerificarStatus()
         {
             switch (_taskAtual.Status)
@@ -276,6 +285,26 @@ namespace UI.TechLeaderFolder
             {
                 MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnVerRelac_Click(object sender, EventArgs e)
+        {
+            if (_taskAtual.Relation == null)
+            {
+                MessageBox.Show("A tarefa selecionada não possui relação.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            _taskRelationForm = new TaskRelationForm(_taskAtual.Relation);
+            this.Hide();
+            _taskRelationForm.FormClosed += TaskRelationForm_FormClosed;
+            _taskRelationForm.ShowDialog();
+        }
+
+        private void TaskRelationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Thread.Sleep(500);
+            this.Show();
         }
     }
 }

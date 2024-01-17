@@ -45,6 +45,8 @@ namespace UI.Task
                 numericTempo.Enabled = false;
                 radiobtnNao.Enabled = false;
                 radiobtnSim.Enabled = false;
+                lblRelacao.Enabled = false;
+                txtboxRelacao.Enabled = false;
             }
 
             this.user = user;
@@ -79,8 +81,9 @@ namespace UI.Task
                 var aprovada = radiobtnSim.Checked;
                 var duracaoTarefa = (int)numericTempo.Value;
                 var statusAtual = aprovada ? Status.EmAndamento : Status.ASerAprovada;
+                var relacao = string.IsNullOrWhiteSpace(txtboxRelacao.Text) ? null : txtboxRelacao.Text;
 
-                task = new RealTask.Task(name: nomeTarefa, description: descricaoTarefa, responsible: responsavelTarefa, approved: aprovada, taskDaySpan: duracaoTarefa, status: statusAtual);
+                task = new RealTask.Task(name: nomeTarefa, description: descricaoTarefa, responsible: responsavelTarefa, approved: aprovada, taskDaySpan: duracaoTarefa, status: statusAtual, relation: relacao);
             }
             try
             {
@@ -100,6 +103,7 @@ namespace UI.Task
             txtboxDescricao.Text = string.Empty;
             cbboxResponsavel.TabIndex = 0;
             numericTempo.Value = 0;
+            txtboxRelacao.Text = string.Empty;
         }
 
         private void PreencherComboBoxResponsaveis(ArrayList users)
