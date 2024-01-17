@@ -44,6 +44,8 @@
             btnMarcarAbandonada = new Button();
             btnMarcarConcluida = new Button();
             btnMarcarAtrasada = new Button();
+            lblRelacao = new Label();
+            btnVerRelac = new Button();
             SuspendLayout();
             // 
             // lboxTasks
@@ -53,24 +55,24 @@
             lboxTasks.ItemHeight = 20;
             lboxTasks.Location = new Point(9, 58);
             lboxTasks.Name = "lboxTasks";
-            lboxTasks.Size = new Size(322, 364);
+            lboxTasks.Size = new Size(322, 404);
             lboxTasks.TabIndex = 0;
             lboxTasks.SelectedIndexChanged += lboxTasks_SelectedIndexChanged;
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Font = new Font("Segoe UI", 12F);
+            lblNome.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblNome.Location = new Point(354, 58);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(60, 21);
+            lblNome.Size = new Size(63, 21);
             lblNome.TabIndex = 1;
             lblNome.Text = "Nome: ";
             lblNome.Visible = false;
             // 
             // lblDescricao
             // 
-            lblDescricao.Font = new Font("Segoe UI", 12F);
+            lblDescricao.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblDescricao.Location = new Point(354, 94);
             lblDescricao.Name = "lblDescricao";
             lblDescricao.Size = new Size(425, 63);
@@ -81,10 +83,10 @@
             // lblResponsavel
             // 
             lblResponsavel.AutoSize = true;
-            lblResponsavel.Font = new Font("Segoe UI", 12F);
+            lblResponsavel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblResponsavel.Location = new Point(354, 166);
             lblResponsavel.Name = "lblResponsavel";
-            lblResponsavel.Size = new Size(104, 21);
+            lblResponsavel.Size = new Size(109, 21);
             lblResponsavel.TabIndex = 3;
             lblResponsavel.Text = "Responsável: ";
             lblResponsavel.Visible = false;
@@ -92,10 +94,10 @@
             // lblDuracao
             // 
             lblDuracao.AutoSize = true;
-            lblDuracao.Font = new Font("Segoe UI", 12F);
+            lblDuracao.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblDuracao.Location = new Point(354, 204);
             lblDuracao.Name = "lblDuracao";
-            lblDuracao.Size = new Size(121, 21);
+            lblDuracao.Size = new Size(125, 21);
             lblDuracao.TabIndex = 4;
             lblDuracao.Text = "Duração (dias) : ";
             lblDuracao.Visible = false;
@@ -103,10 +105,10 @@
             // lblAprovada
             // 
             lblAprovada.AutoSize = true;
-            lblAprovada.Font = new Font("Segoe UI", 12F);
+            lblAprovada.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblAprovada.Location = new Point(354, 244);
             lblAprovada.Name = "lblAprovada";
-            lblAprovada.Size = new Size(88, 21);
+            lblAprovada.Size = new Size(92, 21);
             lblAprovada.TabIndex = 5;
             lblAprovada.Text = "Aprovada? ";
             lblAprovada.Visible = false;
@@ -114,10 +116,10 @@
             // lblStatus
             // 
             lblStatus.AutoSize = true;
-            lblStatus.Font = new Font("Segoe UI", 12F);
+            lblStatus.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblStatus.Location = new Point(355, 295);
             lblStatus.Name = "lblStatus";
-            lblStatus.Size = new Size(59, 21);
+            lblStatus.Size = new Size(63, 21);
             lblStatus.TabIndex = 6;
             lblStatus.Text = "Status: ";
             lblStatus.Visible = false;
@@ -147,10 +149,10 @@
             // btnEditar
             // 
             btnEditar.Font = new Font("Segoe UI", 11F);
-            btnEditar.Location = new Point(709, 320);
+            btnEditar.Location = new Point(761, 364);
             btnEditar.Margin = new Padding(2);
             btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(83, 24);
+            btnEditar.Size = new Size(73, 29);
             btnEditar.TabIndex = 9;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
@@ -161,7 +163,7 @@
             // 
             btnMarcarImpedimento.AutoSize = true;
             btnMarcarImpedimento.Font = new Font("Segoe UI", 11F);
-            btnMarcarImpedimento.Location = new Point(466, 378);
+            btnMarcarImpedimento.Location = new Point(467, 419);
             btnMarcarImpedimento.Margin = new Padding(2);
             btnMarcarImpedimento.Name = "btnMarcarImpedimento";
             btnMarcarImpedimento.Size = new Size(144, 30);
@@ -175,7 +177,7 @@
             // 
             lblMarcarComo.AutoSize = true;
             lblMarcarComo.Font = new Font("Segoe UI", 11F);
-            lblMarcarComo.Location = new Point(354, 383);
+            lblMarcarComo.Location = new Point(355, 424);
             lblMarcarComo.Margin = new Padding(2, 0, 2, 0);
             lblMarcarComo.Name = "lblMarcarComo";
             lblMarcarComo.Size = new Size(104, 20);
@@ -187,7 +189,7 @@
             // 
             btnMarcarAbandonada.AutoSize = true;
             btnMarcarAbandonada.Font = new Font("Segoe UI", 11F);
-            btnMarcarAbandonada.Location = new Point(631, 378);
+            btnMarcarAbandonada.Location = new Point(632, 419);
             btnMarcarAbandonada.Margin = new Padding(2);
             btnMarcarAbandonada.Name = "btnMarcarAbandonada";
             btnMarcarAbandonada.Size = new Size(120, 30);
@@ -201,7 +203,7 @@
             // 
             btnMarcarConcluida.AutoSize = true;
             btnMarcarConcluida.Font = new Font("Segoe UI", 11F);
-            btnMarcarConcluida.Location = new Point(466, 410);
+            btnMarcarConcluida.Location = new Point(467, 451);
             btnMarcarConcluida.Margin = new Padding(2);
             btnMarcarConcluida.Name = "btnMarcarConcluida";
             btnMarcarConcluida.Size = new Size(145, 30);
@@ -215,7 +217,7 @@
             // 
             btnMarcarAtrasada.AutoSize = true;
             btnMarcarAtrasada.Font = new Font("Segoe UI", 11F);
-            btnMarcarAtrasada.Location = new Point(631, 410);
+            btnMarcarAtrasada.Location = new Point(632, 451);
             btnMarcarAtrasada.Margin = new Padding(2);
             btnMarcarAtrasada.Name = "btnMarcarAtrasada";
             btnMarcarAtrasada.Size = new Size(120, 30);
@@ -225,11 +227,35 @@
             btnMarcarAtrasada.Visible = false;
             btnMarcarAtrasada.Click += btnMarcarAtrasada_Click;
             // 
+            // lblRelacao
+            // 
+            lblRelacao.AutoSize = true;
+            lblRelacao.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            lblRelacao.Location = new Point(355, 332);
+            lblRelacao.Name = "lblRelacao";
+            lblRelacao.Size = new Size(71, 21);
+            lblRelacao.TabIndex = 15;
+            lblRelacao.Text = "Relação:";
+            lblRelacao.Visible = false;
+            // 
+            // btnVerRelac
+            // 
+            btnVerRelac.Font = new Font("Segoe UI", 11F);
+            btnVerRelac.Location = new Point(703, 15);
+            btnVerRelac.Name = "btnVerRelac";
+            btnVerRelac.Size = new Size(130, 32);
+            btnVerRelac.TabIndex = 16;
+            btnVerRelac.Text = "Ver Relacionadas";
+            btnVerRelac.UseVisualStyleBackColor = true;
+            btnVerRelac.Click += btnVerRelac_Click;
+            // 
             // DeveloperTaskViewerForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 449);
+            ClientSize = new Size(845, 492);
+            Controls.Add(btnVerRelac);
+            Controls.Add(lblRelacao);
             Controls.Add(btnMarcarAtrasada);
             Controls.Add(btnMarcarConcluida);
             Controls.Add(btnMarcarAbandonada);
@@ -272,5 +298,7 @@
         private Button btnMarcarAbandonada;
         private Button btnMarcarConcluida;
         private Button btnMarcarAtrasada;
+        private Label lblRelacao;
+        private Button btnVerRelac;
     }
 }
