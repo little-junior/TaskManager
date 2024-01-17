@@ -37,14 +37,14 @@ namespace DataLayer.DataAccess
             List<RealTask.Task> tasks = ReadJSON();
             tasks.Add(task);
 
-            string json = JsonSerializer.Serialize(tasks);
+            string json = JsonSerializer.Serialize(tasks.OrderBy(t => t.Name));
 
             File.WriteAllText(_path, json);
         }
 
         public void WriteJSON(List<RealTask.Task> tasks)
         {
-            string json = JsonSerializer.Serialize(tasks);
+            string json = JsonSerializer.Serialize(tasks.OrderBy(t => t.Name));
 
             File.WriteAllText(_path, json);
         }
