@@ -18,6 +18,8 @@ namespace UI.AdminFolder
         {
             InitializeComponent();
             lblData.Text = DateTime.Now.ToString("D", CultureInfo.GetCultureInfo("pt-br"));
+            string primeiraLetraMaiuscula = char.ToUpper(lblData.Text[0]) + lblData.Text.Substring(1);
+            lblData.Text = primeiraLetraMaiuscula;
         }
 
         private void btnAddTechLeader_Click(object sender, EventArgs e)

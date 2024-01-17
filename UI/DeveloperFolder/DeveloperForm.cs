@@ -22,6 +22,8 @@ namespace UI.Developer
         {
             InitializeComponent();
             lblData.Text = DateTime.Now.ToString("D", CultureInfo.GetCultureInfo("pt-br"));
+            string primeiraLetraMaiuscula = char.ToUpper(lblData.Text[0]) + lblData.Text.Substring(1);
+            lblData.Text = primeiraLetraMaiuscula;
             Developer = developer;
             lblInfos.Text = developer.NameSpecializationPosition;
         }
