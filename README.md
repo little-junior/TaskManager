@@ -5,7 +5,7 @@
 ## 🚀 Como executar 
 
 1. Requisitos
-    - Tenha o [.NET SDK](https://dotnet.microsoft.com/pt-br/download/visual-studio-sdks) com o framework .NET 8.0 instalado na sua máquina.
+    - Tenha o [.NET RUNTIME 8.0](https://dotnet.microsoft.com/pt-br/download) ou [.NET SDK](https://dotnet.microsoft.com/pt-br/download/visual-studio-sdks) com o framework .NET 8.0 instalado na sua máquina.
 
 2. Clonar o repositório
     ```
