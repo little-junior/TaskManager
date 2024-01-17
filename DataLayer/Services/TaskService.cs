@@ -30,5 +30,10 @@ namespace DataLayer.Services
         {
             return _taskDataManagement.ReadJSON();
         }
+
+        public List<RealTask.Task> GetTasksByRelation(string relation)
+        {
+            return GetTasks().FindAll(t => t.Relation == relation);
+        }
     }
 }
