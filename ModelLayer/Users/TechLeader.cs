@@ -21,12 +21,5 @@ namespace ModelLayer.Users
         {
 
         }
-
-        //public TechLeader(string id, string name, string email, Specializations specialization)
-        //: base(id, name, email, Positions.TechLeader, specialization, "tec" + id.Substring(0, 5))
-        //{
-        //}
-
-        
     }
 }
