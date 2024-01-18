@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ModelLayer.Users
 {
-    public class User
+    public abstract class User
     {
         public User(string name, string email, Positions position, Specializations specialization)
         {
@@ -32,12 +32,6 @@ namespace ModelLayer.Users
             NameSpecializationPosition = $"{Name} - {Specialization} {Position}";
         }
 
-        //public User(string name, string email, Positions position, Specializations specialization)
-        //: this(Guid.NewGuid().ToString(), name, email, position, specialization, Guid.NewGuid().ToString().Substring(0, 8))
-        //{
-        //}
-
-
         public string Id { get; } 
         public string Name { get; private set; }
         public string Email { get; private set; }
@@ -47,9 +41,5 @@ namespace ModelLayer.Users
         [JsonIgnore]
         public string? NameSpecializationPosition { get; } = null;
         public string KeyAccess { get; protected set; }
-        
-
-
-
     }
 }
